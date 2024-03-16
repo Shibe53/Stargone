@@ -1,0 +1,19 @@
+#Create-Event
+moveSpd = 3.5;
+xspd = 0;
+yspd = 0;
+
+#Step-Event
+//inputs
+var rightKey = keyboard_check(ord("D"));
+var leftKey = keyboard_check(ord("A"));
+var upKey = keyboard_check(ord("W"));
+var downKey = keyboard_check(ord("S"));
+
+//getting x and y speeds
+xspd = (rightKey - leftKey) * moveSpd;
+yspd = (downKey - upKey) * moveSpd;
+
+//move the player
+x += xspd;
+y += yspd;
