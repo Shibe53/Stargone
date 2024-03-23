@@ -1,1 +1,2 @@
-alarm[0] = 60 * 65
+alarm[0] = 60 * 5
+watered = true;

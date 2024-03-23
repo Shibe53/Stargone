@@ -22,3 +22,7 @@ if place_meeting(x, y + yspd, obj_wall) == true
 // move the player
 x += xspd;
 y += yspd;
+
+if (tilemap_get_at_pixel(tilemap, x + 1, y))
+{
+}

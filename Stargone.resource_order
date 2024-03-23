@@ -20,9 +20,9 @@
     {"name":"obj_plant","order":2,"path":"objects/obj_plant/obj_plant.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"face_Sheet","order":3,"path":"sprites/face_Sheet/face_Sheet.yy",},
+    {"name":"spr_plant","order":4,"path":"sprites/spr_plant/spr_plant.yy",},
     {"name":"spr_spaceship_tileset","order":2,"path":"sprites/spr_spaceship_tileset/spr_spaceship_tileset.yy",},
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"Sprite5","order":3,"path":"sprites/Sprite5/Sprite5.yy",},
-    {"name":"spr_plant","order":4,"path":"sprites/spr_plant/spr_plant.yy",},
   ],
 }
