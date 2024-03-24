@@ -1,3 +1,4 @@
+// change held item position
 if instance_exists(held_item)
 {
 	held_item.x = x - 3 * image_xscale;

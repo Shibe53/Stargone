@@ -19,6 +19,7 @@ if collision(x, y + yspd)
 	yspd = 0;
 }
 
+// get direction player is facing
 if xspd > 0
 {
 	dir = 1;
@@ -36,6 +37,7 @@ else if yspd < 0
 	dir = 2;
 }
 
+// get coordinates right in front of player
 var _ad_x = (dir == 1) - (dir == 3);
 var _ad_y = (dir == 4) - (dir == 2);
 _dx = (x div 16 + _ad_x) * 16;
@@ -46,7 +48,6 @@ x += xspd;
 y += yspd;
 
 // animation 
-
 if xspd != 0 or yspd != 0
 {
 	sprite_index = spr_player_move;
@@ -59,4 +60,19 @@ if xspd != 0 or yspd != 0
 else 
 {
 	sprite_index = spr_player_idle;
+}
+
+// change held item
+if keyboard_check(ord("X"))
+{
+	instance_destroy(held_item);
+	item_index = 1;
+	held_item = instance_create_layer(x, y, "instances", items[item_index]);
+}
+
+if keyboard_check(ord("C"))
+{
+	instance_destroy(held_item);
+	item_index = 0;
+	held_item = instance_create_layer(x, y, "instances", items[item_index]);
 }

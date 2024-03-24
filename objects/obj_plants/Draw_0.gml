@@ -12,4 +12,8 @@ draw_self();
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_timer);
-draw_text_transformed(x, y + 5, _min_string + ":" + _sec_string, 0.12, 0.12, 0);
+
+if !hide_timer
+{
+	draw_text_transformed(x, y + 5, _min_string + ":" + _sec_string, 0.12, 0.12, 0);
+}
