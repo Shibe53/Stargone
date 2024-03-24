@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_plant",
+  "%Name":"obj_collision",
   "eventList":[],
   "managed":true,
-  "name":"obj_plant",
+  "name":"obj_collision",
   "overriddenProperties":[],
   "parent":{
-    "name":"Plants",
-    "path":"folders/Objects/Plants.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_plants",
-    "path":"objects/obj_plants/obj_plants.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_plant",
-    "path":"sprites/spr_plant/spr_plant.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
