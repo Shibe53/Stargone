@@ -41,6 +41,9 @@
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},},
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     {"id":{"name":"obj_plant","path":"objects/obj_plant/obj_plant.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},

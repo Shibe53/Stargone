@@ -34,7 +34,11 @@
   "spriteId":null,
   "spriteMaskId":null,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "visible":true,
+=======
+  "visible":false,
+>>>>>>> Stashed changes
 =======
   "visible":false,
 >>>>>>> Stashed changes

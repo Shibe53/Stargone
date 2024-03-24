@@ -8,7 +8,11 @@ var _key_press = keyboard_check_pressed(ord("Z"));
 
 with (_waterable)
 {
+<<<<<<< Updated upstream
 	if (state = "SEED" or state = "SPROUT") and distance_to_object(obj_player) <= 10 // what wrong with distance
+=======
+	if (state = "SEED" or state = "SPROUT") and distance_to_object(obj_player) <= 10 //wtf distance
+>>>>>>> Stashed changes
 	{
 		other.selector_inst = id;
 		

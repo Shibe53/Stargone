@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 var g_width = display_get_gui_width();
 var g_height = display_get_gui_height();
@@ -150,6 +151,8 @@ for (var row = 0; row < inventory_rows; row++) {
 
 draw_reset();
 =======
+=======
+>>>>>>> Stashed changes
 
 var g_width = display_get_gui_width();
 var g_height = display_get_gui_height();
@@ -299,5 +302,9 @@ for (var row = 0; row < inventory_rows; row++) {
 	}
 }
 
+<<<<<<< Updated upstream
+draw_reset();
+>>>>>>> Stashed changes
+=======
 draw_reset();
 >>>>>>> Stashed changes

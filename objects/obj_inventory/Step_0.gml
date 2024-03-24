@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 var mx = device_mouse_x_to_gui(0);
 var my = device_mouse_y_to_gui(0);
@@ -41,6 +42,8 @@ if keyboard_check_pressed(ord("E")) {
 	obj_inventory.visible = false
 	}
 =======
+=======
+>>>>>>> Stashed changes
 
 var mx = device_mouse_x_to_gui(0);
 var my = device_mouse_y_to_gui(0);
@@ -73,11 +76,27 @@ if(mouse_check_button_released(mb_left) and show_inventory) {
 		}
 }
 
+<<<<<<< Updated upstream
 if keyboard_check_pressed(ord("E")) {
 	show_inventory = !show_inventory;
 	if(show_inventory == true ) {
 		obj_inventory.visible = true
 	} if(show_inventory == false){
+		obj_inventory.visible = false
+	}
+>>>>>>> Stashed changes
+=======
+if keyboard_check_pressed(ord("E")) 
+{
+	show_inventory = !show_inventory;
+	
+	if(show_inventory == true) 
+	{
+		obj_inventory.visible = true
+	} 
+	
+	if(show_inventory == false)
+	{
 		obj_inventory.visible = false
 	}
 >>>>>>> Stashed changes

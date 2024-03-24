@@ -18,11 +18,14 @@
   ],
   "ResourceOrderSettings":[
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     {"name":"obj_plant","order":2,"path":"objects/obj_plant/obj_plant.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"face_Sheet","order":3,"path":"sprites/face_Sheet/face_Sheet.yy",},
     {"name":"spr_plant","order":4,"path":"sprites/spr_plant/spr_plant.yy",},
 =======
+=======
+>>>>>>> Stashed changes
     {"name":"fn_Ubuntu","order":1,"path":"fonts/fn_Ubuntu/fn_Ubuntu.yy",},
     {"name":"obj_collision","order":6,"path":"objects/obj_collision/obj_collision.yy",},
     {"name":"obj_controller","order":5,"path":"objects/obj_controller/obj_controller.yy",},
@@ -30,6 +33,7 @@
     {"name":"obj_plants","order":1,"path":"objects/obj_plants/obj_plants.yy",},
     {"name":"obj_shovel","order":1,"path":"objects/obj_shovel/obj_shovel.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
+<<<<<<< Updated upstream
     {"name":"draw_reset","order":4,"path":"scripts/draw_reset/draw_reset.yy",},
     {"name":"draw_set","order":5,"path":"scripts/draw_set/draw_set.yy",},
     {"name":"Inventory","order":1,"path":"scripts/Inventory/Inventory.yy",},
@@ -41,6 +45,19 @@
     {"name":"spr_seed_space_cactus","order":14,"path":"sprites/spr_seed_space_cactus/spr_seed_space_cactus.yy",},
     {"name":"spr_seed_spacemelon","order":11,"path":"sprites/spr_seed_spacemelon/spr_seed_spacemelon.yy",},
     {"name":"spr_seed_sun_flower","order":12,"path":"sprites/spr_seed_sun_flower/spr_seed_sun_flower.yy",},
+=======
+    {"name":"draw_reset","order":3,"path":"scripts/draw_reset/draw_reset.yy",},
+    {"name":"draw_set","order":4,"path":"scripts/draw_set/draw_set.yy",},
+    {"name":"Inventory","order":5,"path":"scripts/Inventory/Inventory.yy",},
+    {"name":"is_between","order":1,"path":"scripts/is_between/is_between.yy",},
+    {"name":"text_align","order":2,"path":"scripts/text_align/text_align.yy",},
+    {"name":"spr_Inventory_Box","order":12,"path":"sprites/spr_Inventory_Box/spr_Inventory_Box.yy",},
+    {"name":"spr_player_idle","order":3,"path":"sprites/spr_player_idle/spr_player_idle.yy",},
+    {"name":"spr_player_move","order":5,"path":"sprites/spr_player_move/spr_player_move.yy",},
+    {"name":"spr_seed_space_cactus","order":13,"path":"sprites/spr_seed_space_cactus/spr_seed_space_cactus.yy",},
+    {"name":"spr_seed_spacemelon","order":14,"path":"sprites/spr_seed_spacemelon/spr_seed_spacemelon.yy",},
+    {"name":"spr_seed_sun_flower","order":11,"path":"sprites/spr_seed_sun_flower/spr_seed_sun_flower.yy",},
+>>>>>>> Stashed changes
     {"name":"spr_selector","order":6,"path":"sprites/spr_selector/spr_selector.yy",},
     {"name":"spr_shovel","order":1,"path":"sprites/spr_shovel/spr_shovel.yy",},
 >>>>>>> Stashed changes

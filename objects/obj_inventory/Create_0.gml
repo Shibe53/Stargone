@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 inventory = new Inventory();
 
@@ -34,6 +35,8 @@ color_inventory_highlight = c_white;
 showInventory = false;
 
 =======
+=======
+>>>>>>> Stashed changes
 
 inventory = new Inventory();
 
@@ -64,6 +67,11 @@ color_border = #36234a;
 color_inventory_text = c_white;
 color_inventory_highlight = c_white;
 
+<<<<<<< Updated upstream
 show_inventory = true;
+
+>>>>>>> Stashed changes
+=======
+show_inventory = false;
 
 >>>>>>> Stashed changes
