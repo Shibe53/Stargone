@@ -1,5 +1,5 @@
 // move variables
-move_spd = 2;
+move_spd = 3.5;
 xspd = 0;
 yspd = 0;
 

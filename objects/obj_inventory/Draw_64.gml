@@ -51,13 +51,13 @@ draw_set(c_black, 0.5);
 draw_text(
 	ui_padding_x + (ui_border_size * 3) + 4,
 	ui_padding_y + (ui_border_size * 4) + 4,
-	"Stats"
+	"Craft"
 );
 draw_set(c_white, 1);
 draw_text(
 	ui_padding_x + (ui_border_size * 3),
 	ui_padding_y + (ui_border_size * 4),
-	"Stats"
+	"Craft"
 );
 
 draw_set(c_black, 0.5);
@@ -110,7 +110,7 @@ for (var row = 0; row < inventory_rows; row++) {
 			draw_sprite(inventory_items[inventory_index].sprite, 0, pos_x, pos_y);
 		}
 		
-		//// if our mouse is between one of the columns let's highlight it
+		// if our mouse is between one of the columns let's highlight it
 		if(is_between(mx, pos_x, pos_x + ui_inventory_box)) {
 			if(is_between(my, pos_y, pos_y + ui_inventory_box)) {
 				draw_set(color_inventory_highlight, 0.2);
@@ -125,7 +125,7 @@ for (var row = 0; row < inventory_rows; row++) {
 			}
 		}
 		
-		//// now do this again but for quantity only
+		// now do this again but for quantity only
 		if(inventory_index <= array_length(inventory_items) - 1) {
 			draw_set(#232323, 1);
 			draw_circle(
@@ -147,4 +147,42 @@ for (var row = 0; row < inventory_rows; row++) {
 	}
 }
 
+//recipe GUI
+if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) <= 80
+{
+	var _recipies = inventory.recipe_get();
+	var pos_x = ui_padding_x + (ui_border_size * 3) + 4;
+	for(var recipe_index = 0; recipe_index < array_length(_recipies); recipe_index++) {
+		var pos_y = ui_padding_y + (ui_border_size * 13) + (recipe_index * (ui_inventory_margin + ui_inventory_box));
+	
+		draw_sprite(spr_Recipe_Box, 0, pos_x, pos_y);
+		draw_sprite(_recipies[recipe_index].sprite, 0, pos_x, pos_y);
+	
+		draw_set_halign(fa_left);
+		draw_text(pos_x + 56, pos_y + 16, _recipies[recipe_index].name);
+	
+		var requirement_string = "";
+		for(var requirement_index = 0; requirement_index < array_length(_recipies[recipe_index].requirements); requirement_index++) {
+			requirement_string += $"{_recipies[recipe_index].requirements[requirement_index].name}: {_recipies[recipe_index].requirements[requirement_index].quantity}  ";
+		}
+	
+		draw_text(pos_x + 56, pos_y + 32 + 16, $"REQ: {requirement_string}");
+	
+		// hover
+		if(is_between(mx, pos_x, pos_x + ui_panel_left - 64)) {
+			if(is_between(my, pos_y, pos_y + ui_inventory_box)) {
+				draw_set(color_inventory_highlight, 0.2);
+				draw_rectangle(
+					pos_x,
+					pos_y,
+					pos_x + ui_panel_left - 64,
+					pos_y + ui_inventory_box,
+					false
+				);
+			
+				draw_reset();
+			}
+		}
+	}
+}
 draw_reset();

@@ -1,19 +1,43 @@
 
-inventory = new Inventory();
+randomize();
 
-inventory.item_add("Space Cactus", 3, spr_seed_space_cactus);
-inventory.item_add("Space cactus", 2, spr_seed_space_cactus);
-inventory.item_add("Sun flower", 10, spr_seed_sun_flower);
-inventory.item_add("Watermelon", 5, spr_seed_spacemelon);
+inventory = new Recipe();
 
-show_debug_message(inventory);
+inventory.item_add("Clay Crust", 2, spr_clay_crust);
+inventory.item_add("Space Dust", 2, spr_space_dust);
+inventory.item_add("Solar Juice", 1, spr_solar_juice);
+
+// recipies
+inventory.recipe_add("Compost", [ 
+	
+		{name: "Clay Crust", //requirement
+		quantity: 1
+	}], [{
+		name: "Compost", //product
+		quantity: 1,
+		sprite: spr_compost
+	}], spr_compost); //we need a compost sprite
+	
+inventory.recipe_add("Nebula Nourishment", [
+	
+		{name: "Space Dust", //requirement 1
+		quantity: 1
+		},
+		{name: "Solar Juice", //requirement 2
+		quantity: 1
+		}
+		], [{
+		name: "Nebula Nourishment", //product
+		quantity: 1, 
+		sprite: spr_nebula_nourishment
+	}], spr_nebula_nourishment);
 
 // UI INFORMATION //
 
 display_set_gui_size(1280, 720);
 
-inventory_columns = 4;
-inventory_rows = 3;
+inventory_columns = 9;
+inventory_rows = 5;
 
 ui_padding_x = 64;
 ui_padding_y = 64;

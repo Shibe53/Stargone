@@ -8,7 +8,7 @@ var _key_press = keyboard_check_pressed(ord("Z"));
 
 with (_harvestable)
 {
-	if (state = "HARVEST" or state = "WITHERED") and distance_to_object(obj_player) <= 10 // distance doesn't work lmao
+	if (state = "HARVEST" or state = "WITHERED") and distance_to_object(obj_player) <= 30 // distance doesn't work lmao
 	{
 		other.selector_inst = id;
 		

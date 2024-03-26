@@ -8,7 +8,7 @@ var _key_press = keyboard_check_pressed(ord("Z"));
 
 with (_waterable)
 {
-	if (state = "SEED" or state = "SPROUT") and distance_to_object(obj_player) <= 10 //wtf distance
+	if (state = "SEED" or state = "SPROUT") and distance_to_object(obj_player) <= 30 //wtf distance
 	{
 		other.selector_inst = id;
 		
