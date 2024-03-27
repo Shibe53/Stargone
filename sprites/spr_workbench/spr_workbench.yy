@@ -3,7 +3,7 @@
   "%Name":"spr_workbench",
   "bboxMode":2,
   "bbox_bottom":126,
-  "bbox_left":6,
+  "bbox_left":2,
   "bbox_right":61,
   "bbox_top":0,
   "collisionKind":1,

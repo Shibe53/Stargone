@@ -148,7 +148,7 @@ for (var row = 0; row < inventory_rows; row++) {
 }
 
 //recipe GUI
-if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) <= 80
+if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) <= 125
 {
 	var _recipies = inventory.recipe_get();
 	var pos_x = ui_padding_x + (ui_border_size * 3) + 4;
@@ -185,4 +185,5 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) 
 		}
 	}
 }
+
 draw_reset();

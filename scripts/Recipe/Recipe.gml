@@ -13,7 +13,6 @@ function Recipe(): Inventory() constructor{
 		}
 		
 		return -1;
-		
 	}
 	
 	//add recipies
@@ -30,20 +29,20 @@ function Recipe(): Inventory() constructor{
 	
 	recipe_has = function(_name) {
 		var index = recipe_find(_name);
-		var can_craft = false;
-		
+		var can_craft = true; 
+
 		if(index >= 0) {
-			can_craft = true;
-			
 			for(var requirement_index = 0; requirement_index < array_length(_recipies[index].requirements); requirement_index++){
-				if(item_has(_recipies[index].requirements[requirement_index].name, _recipies[index].requirements[requirement_index].quantity) == false)
-					can_craft = false;
-					break;
+				if(!item_has(_recipies[index].requirements[requirement_index].name, _recipies[index].requirements[requirement_index].quantity)) {
+					can_craft = false; 
+					break; 
 				}
 			}
-		
-		return can_craft;
-	}
+		} else {
+			can_craft = false; 
+		}
+    return can_craft;
+}
 	
 	
 	recipe_craft = function(_name) {
@@ -56,11 +55,9 @@ function Recipe(): Inventory() constructor{
 					
 				}
 			
-				for(var product_index = 0; product_index < array_lenght(_recipies[index].products);product_index++){
+				for(var product_index = 0; product_index < array_length(_recipies[index].products);product_index++){
 					item_add(_recipies[index].products[product_index].name, _recipies[index].products[product_index].quantity, _recipies[index].products[product_index].sprite);
-					
 				}
-				
 			}
 		}
 	}

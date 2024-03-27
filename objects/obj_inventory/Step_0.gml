@@ -28,6 +28,24 @@ if(mouse_check_button_released(mb_left) and show_inventory) {
 				}
 			}
 		}
+	#endregion
+
+    #region RECIPE
+        var _recipies = inventory.recipe_get();
+        var pos_x = ui_padding_x + (ui_border_size * 3) + 4;
+        for(var recipe_index = 0; recipe_index < array_length(_recipies); recipe_index++) {
+            var pos_y = ui_padding_y + (ui_border_size * 13) + (recipe_index * (ui_inventory_margin + ui_inventory_box));
+
+            // hover
+            if(is_between(mx, pos_x, pos_x + ui_panel_left - 64)) {
+                if(is_between(my, pos_y, pos_y + ui_inventory_box)) {
+                    if(inventory.recipe_has(_recipies[recipe_index].name)) {
+                        inventory.recipe_craft(_recipies[recipe_index].name);
+                    }
+                }
+            }
+        }
+    #endregion 
 }
 
 if keyboard_check_pressed(ord("E")) 
