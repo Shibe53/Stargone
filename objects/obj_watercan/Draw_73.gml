@@ -1,4 +1,4 @@
-if instance_exists(selector_inst)
+if instance_exists(selector_inst) and can_use
 {
 	with (selector_inst)
 	{

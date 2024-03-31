@@ -1,5 +1,6 @@
 rotation = 45;
 distance = 10;
+can_use = true;
 
 selector_inst = noone;
 selector_frame = 0;

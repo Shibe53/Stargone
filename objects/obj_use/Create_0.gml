@@ -1,6 +1,6 @@
-rotation = 45;
-distance = 10;
-can_use = true;
+state = "";
+break_distance = 32;
+destroy = false;
 
 selector_inst = noone;
 selector_frame = 0;

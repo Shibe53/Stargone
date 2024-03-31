@@ -3,11 +3,12 @@ randomize();
 
 inventory = new Recipe();
 
-inventory.item_add("Clay Crust", 2, spr_clay_crust);
-inventory.item_add("Space Dust", 2, spr_space_dust);
-inventory.item_add("Solar Juice", 1, spr_solar_juice);
+inventory.item_add("Clay Crust", 2, spr_clay_crust, false, "crafting");
+inventory.item_add("Space Dust", 2, spr_space_dust, false, "crafting");
+inventory.item_add("Solar Juice", 1, spr_solar_juice, false , "crafting");
+inventory.item_add("Sun Flower seed", 3, spr_seed_sun_flower, true, "seed");
 
-// recipies
+// recipes
 inventory.recipe_add("Compost", [ 
 	
 		{name: "Clay Crust", //requirement
@@ -15,8 +16,10 @@ inventory.recipe_add("Compost", [
 	}], [{
 		name: "Compost", //product
 		quantity: 1,
-		sprite: spr_compost
-	}], spr_compost); //we need a compost sprite
+		sprite: spr_compost,
+		usable: true,
+		role: "tree"
+	}], spr_compost);
 	
 inventory.recipe_add("Nebula Nourishment", [
 	
@@ -29,7 +32,9 @@ inventory.recipe_add("Nebula Nourishment", [
 		], [{
 		name: "Nebula Nourishment", //product
 		quantity: 1, 
-		sprite: spr_nebula_nourishment
+		sprite: spr_nebula_nourishment,
+		usable: true,
+		role: "powerup"
 	}], spr_nebula_nourishment);
 
 // UI INFORMATION //

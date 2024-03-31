@@ -1,4 +1,4 @@
-if instance_exists(selector_inst) and can_use
+if instance_exists(selector_inst)
 {
 	with (selector_inst)
 	{
@@ -17,3 +17,5 @@ if instance_exists(selector_inst) and can_use
 	
 	selector_inst = noone;
 }
+
+draw_sprite_ext(sprite, 1, mouse_x, mouse_y, 0.5, 0.5, 0, c_white, 1);

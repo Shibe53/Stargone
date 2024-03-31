@@ -46,7 +46,7 @@ function Recipe(): Inventory() constructor{
 	
 	
 	recipe_craft = function(_name) {
-		var index =recipe_find(_name);
+		var index = recipe_find(_name);
 		
 		if(index >= 0){
 			if(recipe_has(_name)){	
@@ -56,7 +56,7 @@ function Recipe(): Inventory() constructor{
 				}
 			
 				for(var product_index = 0; product_index < array_length(_recipies[index].products);product_index++){
-					item_add(_recipies[index].products[product_index].name, _recipies[index].products[product_index].quantity, _recipies[index].products[product_index].sprite);
+					item_add(_recipies[index].products[product_index].name, _recipies[index].products[product_index].quantity, _recipies[index].products[product_index].sprite, _recipies[index].products[product_index].usable);
 				}
 			}
 		}

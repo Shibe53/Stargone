@@ -159,14 +159,14 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) 
 		draw_sprite(_recipies[recipe_index].sprite, 0, pos_x, pos_y);
 	
 		draw_set_halign(fa_left);
-		draw_text(pos_x + 56, pos_y + 16, _recipies[recipe_index].name);
+		draw_text(pos_x + 80, pos_y + 16, _recipies[recipe_index].name); // make constants with this stuff
 	
 		var requirement_string = "";
 		for(var requirement_index = 0; requirement_index < array_length(_recipies[recipe_index].requirements); requirement_index++) {
-			requirement_string += $"{_recipies[recipe_index].requirements[requirement_index].name}: {_recipies[recipe_index].requirements[requirement_index].quantity}  ";
+			requirement_string += $"{_recipies[recipe_index].requirements[requirement_index].name}: {_recipies[recipe_index].requirements[requirement_index].quantity}\n";
 		}
 	
-		draw_text(pos_x + 56, pos_y + 32 + 16, $"REQ: {requirement_string}");
+		draw_text(pos_x + 80, pos_y + 32 + 16, $"REQ: {requirement_string}");
 	
 		// hover
 		if(is_between(mx, pos_x, pos_x + ui_panel_left - 64)) {

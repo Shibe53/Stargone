@@ -7,7 +7,12 @@ if _player_exists
 }
 
 with(all) 
-{
+{	
+	if object_index == obj_dirt_patch
+	{
+		continue;
+	}
+	
 	depth = -bbox_bottom;
 	
 	if _player_exists and _held_item == id
