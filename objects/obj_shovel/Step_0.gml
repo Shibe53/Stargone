@@ -6,7 +6,7 @@ if can_use
 	image_xscale = sign(obj_player.image_xscale);
 
 	var _harvestable = instance_nearest(x, y, obj_plants);
-	var _key_press = keyboard_check_pressed(ord("Z"));
+	var _key_press = keyboard_check_pressed(ord("F"));
 
 	with (_harvestable)
 	{

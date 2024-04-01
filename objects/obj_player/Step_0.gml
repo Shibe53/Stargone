@@ -1,8 +1,8 @@
 // inputs
-var _right_key = keyboard_check(vk_right);
-var _left_key = keyboard_check(vk_left);
-var _up_key = keyboard_check(vk_up);
-var _down_key = keyboard_check(vk_down);
+var _right_key = keyboard_check(ord("D"));
+var _left_key = keyboard_check(ord("A"));
+var _up_key = keyboard_check(ord("W"));
+var _down_key = keyboard_check(ord("S"));
 
 // getting x and y speeds
 xspd = (_right_key - _left_key) * move_spd;
@@ -63,14 +63,14 @@ else
 }
 
 // change held item
-if keyboard_check(ord("X"))
+if keyboard_check(ord("Z"))
 {
 	instance_destroy(held_item);
 	item_index = 1;
 	held_item = instance_create_layer(x, y, "instances", items[item_index]);
 }
 
-if keyboard_check(ord("C"))
+if keyboard_check(ord("X"))
 {
 	instance_destroy(held_item);
 	item_index = 0;

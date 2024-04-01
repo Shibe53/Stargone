@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"text_drop_shadow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"text_drop_shadow",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

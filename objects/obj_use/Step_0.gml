@@ -48,7 +48,7 @@ switch state
 			var _dist = distance_to_object(obj_player);
 	
 			// in range?
-			if _dist < other.break_distance
+			if _dist < other.break_distance and state != "WITHERED" and state != "HARVESTABLE"
 			{
 				// get selected
 				other.selector_inst = id;
@@ -63,13 +63,6 @@ switch state
 					break;
 				}	
 			}
-		
-			if keyboard_check_pressed(ord("E")) 
-			{
-				obj_player.held_item.can_use = true;
-				other.destroy = true;
-				break;
-			}
 		}
 	} break;
 	
@@ -79,5 +72,11 @@ switch state
 	} break;
 }
 
+if mouse_check_button(mb_right) or keyboard_check_pressed(ord("E"))
+{
+	obj_player.held_item.can_use = true;
+	destroy = true;
+}
+
 if destroy
-		instance_destroy();
+	instance_destroy();
