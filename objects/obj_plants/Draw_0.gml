@@ -17,3 +17,8 @@ if !hide_timer
 {
 	draw_text_transformed_color(x, y + 10, _min_string + ":" + _sec_string, 0.12, 0.12, 0, alarm_color, alarm_color, alarm_color, alarm_color, 1);
 }
+
+if !watered 
+{
+	draw_sprite_ext(spr_no_water, 1, x + 20, y - 10, 0.70, 0.70, 0, c_white, 1);
+}
