@@ -1,34 +1,83 @@
 
 var _mouse_press = mouse_check_button_released(mb_left);
 
-var _plantable = instance_position(mouse_x, mouse_y, obj_dirt_patch);
-
-with (_plantable)
+switch state
 {
-	// get distance
-	var _dist = distance_to_object(obj_player);
-	
-	// in range?
-	if _dist < other.break_distance
+	case "seed":
 	{
-		// on click
-		if _mouse_press and !has_plant
+		var _plantable = instance_position(mouse_x, mouse_y, obj_dirt_patch);
+
+		with (_plantable)
 		{
-			instance_create_layer(x, y, "instances", obj_galaxy_cactus);
-			has_plant = true;
-			obj_player.held_item.can_use = true;
-			other.destroy = true;
-			break;
-		}	
-	}
+			// get distance
+			var _dist = distance_to_object(obj_player);
 	
-	if keyboard_check_pressed(ord("E")) 
+			// in range?
+			if _dist < other.break_distance
+			{
+				// get selected
+				other.selector_inst = id;
+				
+				// on click
+				if _mouse_press and !has_plant
+				{
+					instance_create_layer(x, y + 3, "instances", other.plant);
+					has_plant = true;
+					obj_player.held_item.can_use = true;
+					other.destroy = true;
+					break;
+				}	
+			}
+		
+			if keyboard_check_pressed(ord("E")) 
+			{
+				obj_player.held_item.can_use = true;
+				other.destroy = true;
+				break;
+			}
+		}
+	} break;
+	
+	case "powerup":
 	{
-		obj_player.held_item.can_use = true;
-		other.destroy = true;
-		break;
-	}
+		var _powerupable = instance_position(mouse_x, mouse_y, obj_plants);
+
+		with (_powerupable)
+		{
+			// get distance
+			var _dist = distance_to_object(obj_player);
+	
+			// in range?
+			if _dist < other.break_distance
+			{
+				// get selected
+				other.selector_inst = id;
+			
+				// on click
+				if _mouse_press
+				{
+					alarm_speed = 5;
+					alarm_color = c_yellow;
+					obj_player.held_item.can_use = true;
+					other.destroy = true;
+					break;
+				}	
+			}
+		
+			if keyboard_check_pressed(ord("E")) 
+			{
+				obj_player.held_item.can_use = true;
+				other.destroy = true;
+				break;
+			}
+		}
+	} break;
+	
+	case "tree":
+	{
+		
+	} break;
 }
 
 if destroy
-	instance_destroy();
+		instance_destroy();

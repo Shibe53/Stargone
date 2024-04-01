@@ -56,7 +56,7 @@ function Recipe(): Inventory() constructor{
 				}
 			
 				for(var product_index = 0; product_index < array_length(_recipies[index].products);product_index++){
-					item_add(_recipies[index].products[product_index].name, _recipies[index].products[product_index].quantity, _recipies[index].products[product_index].sprite, _recipies[index].products[product_index].usable);
+					item_add(_recipies[index].products[product_index].name, _recipies[index].products[product_index].quantity, _recipies[index].products[product_index].sprite, _recipies[index].products[product_index].usable, _recipies[index].products[product_index].role);
 				}
 			}
 		}

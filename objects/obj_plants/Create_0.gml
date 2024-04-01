@@ -1,4 +1,6 @@
-alarm[0] = 60 * 5;
+alarm_speed = 10;
+alarm_color = c_white;
+alarm[0] = 60 * alarm_speed;
 watered = false;
 hide_timer = false;
 

@@ -5,8 +5,10 @@ inventory = new Recipe();
 
 inventory.item_add("Clay Crust", 2, spr_clay_crust, false, "crafting");
 inventory.item_add("Space Dust", 2, spr_space_dust, false, "crafting");
-inventory.item_add("Solar Juice", 1, spr_solar_juice, false , "crafting");
+inventory.item_add("Solar Juice", 2, spr_solar_juice, false , "crafting");
 inventory.item_add("Sun Flower seed", 3, spr_seed_sun_flower, true, "seed");
+inventory.item_add("Galaxy Cactus seed", 3, spr_seed_galaxy_cactus, true, "seed");
+inventory.item_add("Asteroid Melon seed", 3, spr_seed_asteroid_melon, true, "seed");
 
 // recipes
 inventory.recipe_add("Compost", [ 

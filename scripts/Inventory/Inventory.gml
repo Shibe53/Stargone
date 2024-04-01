@@ -58,21 +58,42 @@ function Inventory() constructor {
 	
 	item_use = function(_index) {
 		show_debug_message($"Using {_inventory_items[_index].name}");
+		
 		obj_player.held_item.can_use = false;
 		
 		var _mousex = device_mouse_x_to_gui(0);
 		var _mousey = device_mouse_y_to_gui(0);
-		var used_object = instance_create_layer(_mousex, _mousey, "instances", obj_use);
-		with(used_object) {
+		var _used_object = instance_create_layer(_mousex, _mousey, "instances", obj_use);
+		
+		with(_used_object) {
 			state = other._inventory_items[_index].role;
 			sprite = other._inventory_items[_index].sprite;
+			switch other._inventory_items[_index].name
+			{
+				case "Sun Flower seed":
+				{
+					plant = obj_sun_flower;
+				} break;
+				case "Galaxy Cactus seed":
+				{
+					plant = obj_galaxy_cactus;
+				} break;
+				case "Asteroid Melon seed":
+				{
+					plant = obj_asteroid_melon;
+				} break;
+				default:
+				{
+					plant = noone;
+				} break;
+			}
 		}
 		
 		item_subtract(_inventory_items[_index].name, 1);
 	}
 	
-	item_remove = function(index) {
-		array_delete(_inventory_items, index, 1);
+	item_remove = function(_index) {
+		array_delete(_inventory_items, _index, 1);
 	}
 	
 	item_get = function() {

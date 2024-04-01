@@ -1,21 +1,24 @@
-rotation = lerp(rotation, 45, 0.1);
-
-image_angle = rotation * obj_player.image_xscale;
-image_xscale = sign(obj_player.image_xscale);
-
-var _waterable = instance_nearest(x, y, obj_plants);
-var _key_press = keyboard_check_pressed(ord("Z"));
-
-with (_waterable)
+if can_use
 {
-	if (state = "SEED" or state = "SPROUT") and distance_to_object(obj_player) <= 30 //wtf distance
+	rotation = lerp(rotation, 45, 0.1);
+
+	image_angle = rotation * obj_player.image_xscale;
+	image_xscale = sign(obj_player.image_xscale);
+
+	var _waterable = instance_nearest(x, y, obj_plants);
+	var _key_press = keyboard_check_pressed(ord("Z"));
+
+	with (_waterable)
 	{
-		other.selector_inst = id;
-		
-		if _key_press
+		if (state = "SEED" or state = "SPROUT") and distance_to_object(obj_player) <= 30 //wtf distance
 		{
-			watered = true;
-			other.rotation = -80;
+			other.selector_inst = id;
+		
+			if _key_press
+			{
+				watered = true;
+				other.rotation = -80;
+			}
 		}
 	}
 }
