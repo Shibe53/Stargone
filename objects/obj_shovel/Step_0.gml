@@ -16,6 +16,28 @@ if can_use
 		
 			if _key_press
 			{
+				switch (object_get_name(object_index)) {
+					case "obj_galaxy_cactus":
+					{
+						obj_inventory.inventory.item_add("Space Dust", 1, spr_space_dust, false, "crafting");
+						show_debug_message("Added Space Dust to inventory."); // Debug message
+						show_debug_message("Inventory Contents: " + string(obj_inventory.inventory.item_get()));
+					} break;
+					case "obj_asteroid_melon":
+					{
+						obj_inventory.inventory.item_add("Clay Crust", 1, spr_clay_crust, false, "crafting");
+						show_debug_message("Added Space Crust to inventory."); // Debug message
+						show_debug_message("Inventory Contents: " + string(obj_inventory.inventory.item_get()));
+					} break;
+					case "obj_sun_flower":
+					{
+						obj_inventory.inventory.item_add("Solar Juice", 1, spr_solar_juice, false, "crafting");
+						show_debug_message("Added Solar Juice to inventory."); // Debug message
+						show_debug_message("Inventory Contents: " + string(obj_inventory.inventory.item_get()));
+					} break;
+				}
+				
+				
 				instance_destroy();
 				other.rotation = -80;
 			}

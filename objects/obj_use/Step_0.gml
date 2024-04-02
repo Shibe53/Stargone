@@ -21,7 +21,7 @@ switch state
 				// on click
 				if _mouse_press and !has_plant
 				{
-					instance_create_layer(x, y + 3, "instances", other.plant);
+					plant = instance_create_layer(x, y + 3, "instances", other.plant);
 					has_plant = true;
 					obj_player.held_item.can_use = true;
 					other.destroy = true;
