@@ -63,16 +63,13 @@ else
 }
 
 // change held item
-if keyboard_check(ord("Z"))
+if keyboard_check_pressed(ord("Q"))
 {
 	instance_destroy(held_item);
-	item_index = 1;
-	held_item = instance_create_layer(x, y, "instances", items[item_index]);
-}
-
-if keyboard_check(ord("X"))
-{
-	instance_destroy(held_item);
-	item_index = 0;
+	item_index++;
+	if item_index > 1
+	{
+		item_index = 0;
+	}
 	held_item = instance_create_layer(x, y, "instances", items[item_index]);
 }

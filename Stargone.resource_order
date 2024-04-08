@@ -77,6 +77,8 @@
     {"name":"spr_spaceship_tileset","order":35,"path":"sprites/spr_spaceship_tileset/spr_spaceship_tileset.yy",},
     {"name":"spr_tree","order":34,"path":"sprites/spr_tree/spr_tree.yy",},
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
+    {"name":"spr_withered","order":36,"path":"sprites/spr_withered/spr_withered.yy",},
     {"name":"spr_workbench","order":28,"path":"sprites/spr_workbench/spr_workbench.yy",},
+    {"name":"spr_harvestable","order":37,"path":"sprites/spr_harvestable/spr_harvestable.yy",},
   ],
 }
