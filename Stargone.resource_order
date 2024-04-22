@@ -46,6 +46,7 @@
     {"name":"obj_use","order":13,"path":"objects/obj_use/obj_use.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"obj_workbench","order":9,"path":"objects/obj_workbench/obj_workbench.yy",},
+    {"name":"obj_pause","order":19,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"rm_menu","order":1,"path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"draw_reset","order":3,"path":"scripts/draw_reset/draw_reset.yy",},
     {"name":"draw_set","order":4,"path":"scripts/draw_set/draw_set.yy",},
@@ -57,6 +58,7 @@
     {"name":"spr_button","order":33,"path":"sprites/spr_button/spr_button.yy",},
     {"name":"spr_compost","order":3,"path":"sprites/spr_compost/spr_compost.yy",},
     {"name":"spr_dirt_patch","order":30,"path":"sprites/spr_dirt_patch/spr_dirt_patch.yy",},
+    {"name":"spr_harvestable","order":37,"path":"sprites/spr_harvestable/spr_harvestable.yy",},
     {"name":"spr_hotbar","order":29,"path":"sprites/spr_hotbar/spr_hotbar.yy",},
     {"name":"spr_Inventory_Box","order":16,"path":"sprites/spr_Inventory_Box/spr_Inventory_Box.yy",},
     {"name":"spr_nebula_nourishment","order":1,"path":"sprites/spr_nebula_nourishment/spr_nebula_nourishment.yy",},
@@ -79,6 +81,5 @@
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"spr_withered","order":36,"path":"sprites/spr_withered/spr_withered.yy",},
     {"name":"spr_workbench","order":28,"path":"sprites/spr_workbench/spr_workbench.yy",},
-    {"name":"spr_harvestable","order":37,"path":"sprites/spr_harvestable/spr_harvestable.yy",},
   ],
 }
