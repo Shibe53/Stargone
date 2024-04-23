@@ -1,5 +1,6 @@
 break_distance = 32;
 destroy = false;
+replace = false;
 
 selector_inst = noone;
 selector_frame = 0;

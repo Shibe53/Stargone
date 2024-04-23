@@ -13,3 +13,5 @@ items[0] = obj_watercan;
 items[1] = obj_shovel;
 item_index = 0;
 held_item = instance_create_layer(x, y, "instances", obj_watercan);
+
+inv_controls = false;

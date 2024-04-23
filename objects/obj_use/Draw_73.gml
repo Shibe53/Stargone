@@ -18,4 +18,7 @@ if instance_exists(selector_inst)
 	selector_inst = noone;
 }
 
-draw_sprite_ext(sprite, 1, mouse_x, mouse_y, 0.5, 0.5, 0, c_white, 1);
+if state != "drink"
+{
+	draw_sprite_ext(sprite, 1, mouse_x, mouse_y, 0.5, 0.5, 0, c_white, 1);
+}

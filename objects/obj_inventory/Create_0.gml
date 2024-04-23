@@ -6,6 +6,9 @@ inventory = new Recipe();
 inventory.item_add("Sun Flower seed", 10, spr_seed_sun_flower, true, "seed");
 inventory.item_add("Galaxy Cactus seed", 10, spr_seed_galaxy_cactus, true, "seed");
 inventory.item_add("Asteroid Melon seed", 10, spr_seed_asteroid_melon, true, "seed");
+inventory.item_add("Hell Flame seed", 10, spr_seed_hell_flame, true, "seed");
+inventory.item_add("Cosmic Cocktail", 10, spr_cosmic_cocktail, true, "drink");
+inventory.item_add("Compost", 10, spr_compost, true, "tree");
 
 // recipes
 inventory.recipe_add("Compost", [ 
@@ -35,6 +38,22 @@ inventory.recipe_add("Nebula Nourishment", [
 		usable: true,
 		role: "powerup"
 	}], spr_nebula_nourishment);
+	
+inventory.recipe_add("Cosmic Cocktail", [
+	
+		{name: "Solar Juice", //requirement 1
+		quantity: 1
+		},
+		{name: "THC", //requirement 2
+		quantity: 1
+		}
+		], [{
+		name: "Cosmic Cocktail", //product
+		quantity: 1, 
+		sprite: spr_cosmic_cocktail,
+		usable: true,
+		role: "drink"
+	}], spr_cosmic_cocktail);
 
 // UI INFORMATION //
 

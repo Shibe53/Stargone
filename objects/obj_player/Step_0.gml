@@ -1,8 +1,18 @@
 // inputs
-var _right_key = keyboard_check(ord("D"));
-var _left_key = keyboard_check(ord("A"));
-var _up_key = keyboard_check(ord("W"));
-var _down_key = keyboard_check(ord("S"));
+if !inv_controls
+{
+	var _right_key = keyboard_check(ord("D"));
+	var _left_key = keyboard_check(ord("A"));
+	var _up_key = keyboard_check(ord("W"));
+	var _down_key = keyboard_check(ord("S"));
+} 
+else
+{
+	var _right_key = keyboard_check(ord("A"));
+	var _left_key = keyboard_check(ord("D"));
+	var _up_key = keyboard_check(ord("S"));
+	var _down_key = keyboard_check(ord("W"));
+}
 
 // getting x and y speeds
 xspd = (_right_key - _left_key) * move_spd;

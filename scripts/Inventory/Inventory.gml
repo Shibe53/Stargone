@@ -68,7 +68,9 @@ function Inventory() constructor {
 		with(_used_object) {
 			state = other._inventory_items[_index].role;
 			sprite = other._inventory_items[_index].sprite;
-			switch other._inventory_items[_index].name
+			item = other._inventory_items[_index].name;
+			
+			switch item
 			{
 				case "Sun Flower seed":
 				{
@@ -82,13 +84,17 @@ function Inventory() constructor {
 				{
 					plant = obj_asteroid_melon;
 				} break;
+				case "Hell Flame seed":
+				{
+					plant = obj_hell_flame;
+				} break;
 				default:
 				{
 					plant = noone;
 				} break;
 			}
 		}
-		
+
 		item_subtract(_inventory_items[_index].name, 1);
 	}
 	

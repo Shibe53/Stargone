@@ -38,6 +38,12 @@ if can_use
 							show_debug_message("Added Solar Juice to inventory."); // Debug message
 							show_debug_message("Inventory Contents: " + string(obj_inventory.inventory.item_get()));
 						} break;
+						case "obj_hell_flame":
+						{
+							obj_inventory.inventory.item_add("THC", 1, spr_thc, false, "crafting");
+							show_debug_message("Added weed to inventory."); // Debug message
+							show_debug_message("Inventory Contents: " + string(obj_inventory.inventory.item_get()));
+						} break;
 					}
 				}
 				instance_destroy();

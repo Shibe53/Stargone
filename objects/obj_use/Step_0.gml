@@ -21,19 +21,12 @@ switch state
 				// on click
 				if _mouse_press and !has_plant
 				{
-					plant = instance_create_layer(x, y - 2, "instances", other.plant);
+					plant = instance_create_layer(x, y - 2, "instances", other.plant); // change item_use in inventory script
 					has_plant = true;
 					obj_player.held_item.can_use = true;
 					other.destroy = true;
 					break;
 				}	
-			}
-		
-			if keyboard_check_pressed(ord("E")) 
-			{
-				obj_player.held_item.can_use = true;
-				other.destroy = true;
-				break;
 			}
 		}
 	} break;
@@ -77,7 +70,7 @@ switch state
 			var _dist = distance_to_object(obj_player);
 	
 			// in range?
-			if _dist < other.break_distance
+			if _dist < other.break_distance and state != "BIG TREE"
 			{
 				// get selected
 				other.selector_inst = id;
@@ -85,19 +78,47 @@ switch state
 				// on click
 				if _mouse_press
 				{
+					switch state
+					{
+						case "SPROUTLING":
+						{
+							state = "LIL TREE";
+						} break;
+	
+						case "LIL TREE":
+						{
+							state = "BIG TREE";
+						} break;
+					}
 					
+					obj_player.held_item.can_use = true;
+					other.destroy = true;
 					break;
 				}	
 			}
 		}
 	} break;
+	
+	case "drink":
+	{
+		obj_player.alarm[1] = 60 * 30;
+		obj_player.move_spd = 4.3;
+		obj_player.inv_controls = true;	
+	} break;
 }
 
-if mouse_check_button(mb_right) or keyboard_check_pressed(ord("E"))
+if mouse_check_button(mb_right) or keyboard_check_pressed(ord("E")) or state = "drink"
 {
 	obj_player.held_item.can_use = true;
 	destroy = true;
 }
 
+if mouse_check_button(mb_right) or keyboard_check_pressed(ord("E"))
+{
+	replace = true;
+}
+
 if destroy
+{
 	instance_destroy();
+}
