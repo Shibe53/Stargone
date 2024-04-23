@@ -1,0 +1,3 @@
+instance_deactivate_all(true);
+lecture = "Walk: WASD                     Switch tools: Q\nUse held item: F               Open inventory: E\nYou can plant seeds by clicking them from your\ninventory and clicking on an empty dirt patch.\nYou must keep the plants watered and harvest them\n when possible, otherwise they will wither.\n Harvesting will give you items which you can use\nto craft at a workbench for powerups\nand other items.";
+instance_create_layer(x + 250, y + 95, "Instances", obj_button_controls_exit);

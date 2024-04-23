@@ -17,22 +17,22 @@ draw_set_valign(fa_middle);
 
 if !hide_timer
 {
-	draw_text_transformed_color(x, y + 10, _min_string + ":" + _sec_string, 0.12, 0.12, 0, alarm_color, alarm_color, alarm_color, alarm_color, 1);
+	draw_text_transformed_color(x + 32, y + 64, _min_string + ":" + _sec_string, 0.12, 0.12, 0, alarm_color, alarm_color, alarm_color, alarm_color, 1);
 }
 
 if !watered and state != "WITHERED"
 {
-	draw_sprite_ext(spr_no_water, 1, x + 20, y - 10, 0.70, 0.70, 0, c_white, 1);
+	draw_sprite_ext(spr_no_water, 1, x + 55, y + 45, 0.70, 0.70, 0, c_white, 1);
 }
 
 if state = "HARVEST"
 {
-	draw_sprite_ext(spr_harvestable, 1, x + 20, y - 10, 0.70, 0.70, 0, c_white, 1);
+	draw_sprite_ext(spr_harvestable, 1, x + 55, y + 45, 0.70, 0.70, 0, c_white, 1);
 }
 
 if state = "WITHERED"
 {
-	draw_sprite_ext(spr_withered, 1, x + 20, y - 10, 0.70, 0.70, 0, c_white, 1);
+	draw_sprite_ext(spr_withered, 1, x + 55, y + 45, 0.70, 0.70, 0, c_white, 1);
 }
 
 draw_set_halign(fa_left);

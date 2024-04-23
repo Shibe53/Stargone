@@ -21,7 +21,7 @@ switch state
 				// on click
 				if _mouse_press and !has_plant
 				{
-					plant = instance_create_layer(x, y + 3, "instances", other.plant);
+					plant = instance_create_layer(x, y - 2, "instances", other.plant);
 					has_plant = true;
 					obj_player.held_item.can_use = true;
 					other.destroy = true;
@@ -57,6 +57,7 @@ switch state
 				if _mouse_press
 				{
 					alarm_speed = 5;
+					alarm[0] /= 2;
 					alarm_color = c_yellow;
 					obj_player.held_item.can_use = true;
 					other.destroy = true;
@@ -68,7 +69,27 @@ switch state
 	
 	case "tree":
 	{
-		
+		var _upgradeable = instance_position(mouse_x, mouse_y, obj_tree);
+
+		with (_upgradeable)
+		{
+			// get distance
+			var _dist = distance_to_object(obj_player);
+	
+			// in range?
+			if _dist < other.break_distance
+			{
+				// get selected
+				other.selector_inst = id;
+			
+				// on click
+				if _mouse_press
+				{
+					
+					break;
+				}	
+			}
+		}
 	} break;
 }
 

@@ -1,4 +1,4 @@
-var _key_press = keyboard_check_pressed(ord("P"));
+var _key_press = keyboard_check_pressed(vk_escape);
 
 if (_key_press)
 {
