@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_Recipe_Box",
   "bboxMode":0,
-  "bbox_bottom":69,
+  "bbox_bottom":76,
   "bbox_left":0,
-  "bbox_right":69,
+  "bbox_right":76,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":70,
+  "height":77,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"8b95da0e-cf51-4ee0-9d0c-adab9948024d","blendMode":0,"displayName":"default","isLocked":false,"name":"8b95da0e-cf51-4ee0-9d0c-adab9948024d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":70,
+  "width":77,
 }

@@ -1,4 +1,4 @@
-alarm_speed = 15;
+alarm_speed = 5;
 
 // Inherit the parent event
 event_inherited();

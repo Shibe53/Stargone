@@ -49,7 +49,8 @@ switch state
 				// on click
 				if _mouse_press
 				{
-					alarm_speed = 5;
+					watered = true;
+					alarm_speed /= 2;
 					alarm[0] /= 2;
 					alarm_color = c_yellow;
 					obj_player.held_item.can_use = true;
