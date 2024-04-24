@@ -7,9 +7,10 @@ if (state == PAUSED)
     draw_set_alpha(0.4);
     draw_rectangle(0, 0, room_width, room_height, false);
 
+	draw_set_font(fnt_pause);
     draw_set_color(c_white); 
     draw_set_alpha(1.0); 
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle); 
-    draw_text(room_width / 2, room_height / 2, "Game Paused");
+    draw_text(camera_get_view_x(view_camera[0]) / 2 - 250, camera_get_view_y(view_camera[0]) / 2 - 400, "Game Paused");
 }

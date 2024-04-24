@@ -20,7 +20,7 @@ else
 		{
 			image_index = 2;
 			state = "HARVEST";
-			alarm[0] = 60 * alarm_speed;
+			alarm[0] = 60 * alarm_speed / 1.5;
 		} break;
 		
 		case "HARVEST":
