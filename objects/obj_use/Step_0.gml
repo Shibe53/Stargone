@@ -71,7 +71,7 @@ switch state
 			var _dist = distance_to_object(obj_player);
 	
 			// in range?
-			if _dist < other.break_distance and state != "BIG TREE"
+			if _dist < other.break_distance + 10 and state != "BIG TREE"
 			{
 				// get selected
 				other.selector_inst = id;

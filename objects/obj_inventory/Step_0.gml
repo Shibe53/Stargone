@@ -14,8 +14,8 @@ if mouse_check_button_released(mb_left) and show_inventory
 			for (var column = 0; column < inventory_columns and show_inventory; column++) {
 				pos_x = ui_padding_x + ui_panel_left + ui_border_size + ui_inventory_padding + (column * (ui_inventory_margin + ui_inventory_box));
 				
-				if(is_between(mx, pos_x, pos_x + ui_inventory_box)) {
-					if(is_between(my, pos_y, pos_y + ui_inventory_box)) {
+				if(is_between(mx, pos_x, pos_x + ui_inventory_box + 10)) {
+					if(is_between(my, pos_y, pos_y + ui_inventory_box + 10)) {
 						var inventory_index = (row * inventory_columns) + column;
 						// now we need to check if we have a usable inventory item here
 						if(inventory_index <= array_length(inventory_items) - 1 and inventory_items[inventory_index].usable)
@@ -47,16 +47,23 @@ if mouse_check_button_released(mb_left) and show_inventory
     #endregion 
 }
 
-if keyboard_check_pressed(ord("E")) 
+if keyboard_check_pressed(ord("E"))
 {
 	show_inventory = !show_inventory;
 }
 
-if(show_inventory == true) 
+if keyboard_check_released(vk_escape)
+{
+	show_inventory = false;
+}
+
+if show_inventory
 {
 	obj_inventory.visible = true;
+	obj_pause.pausable = false;
 } 
 else
 {
 	obj_inventory.visible = false;
+	obj_pause.pausable = true;
 }

@@ -11,6 +11,10 @@ if (state == PAUSED)
     draw_set_color(c_white); 
     draw_set_alpha(1.0); 
     draw_set_halign(fa_center);
-    draw_set_valign(fa_middle); 
-    draw_text(camera_get_view_x(view_camera[0]) / 2 - 250, camera_get_view_y(view_camera[0]) / 2 - 400, "Game Paused");
+    draw_set_valign(fa_middle);
+    draw_text(camera_get_view_x(view_camera[0])+ 330, camera_get_view_y(view_camera[0]) + 65, "Game Paused");
+}
+else
+{
+	draw_set_color(c_white);
 }

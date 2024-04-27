@@ -122,6 +122,20 @@ for (var row = 0; row < inventory_rows; row++) {
 					false
 				);
 				draw_reset();
+				if inventory_index <= array_length(inventory_items) - 1
+				{
+					draw_rectangle_color(
+						mx - 200,
+						my - 150,
+						mx - 5,
+						my - 5,
+						c_purple,
+						c_purple,
+						c_purple,
+						c_purple,
+						false
+					);
+				}
 			}
 		}
 		
@@ -148,7 +162,7 @@ for (var row = 0; row < inventory_rows; row++) {
 }
 
 //recipe GUI
-if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) <= 125
+if point_distance(obj_player.x, obj_player.y, obj_workbench.x + 32, obj_workbench.y + 64) <= 120
 {
 	var _recipies = inventory.recipe_get();
 	var pos_x = ui_padding_x + (ui_border_size * 3) + 4;
@@ -172,8 +186,10 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) 
 	
 		// hover
 		if(is_between(mx, pos_x, pos_x + ui_panel_left - 32)) {
-			if(is_between(my, pos_y, pos_y + ui_inventory_box + 10)) {
+			if(is_between(my, pos_y, pos_y + ui_inventory_box + 10)) 
+			{
 				draw_set(color_inventory_highlight, 0.2);
+				
 				draw_rectangle(
 					pos_x,
 					pos_y,
@@ -183,9 +199,29 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x, obj_workbench.y) 
 				);
 			
 				draw_reset();
+				
+				draw_rectangle_color(
+					mx + 200,
+					my - 150,
+					mx + 5,
+					my - 5,
+					c_purple,
+					c_purple,
+					c_purple,
+					c_purple,
+					false
+				);
 			}
 		}
 	}
+}
+else
+{
+	var pos_x = ui_padding_x + (ui_border_size * 3) + 10;
+	var pos_y = ui_padding_y + (ui_border_size * 13) + 75;
+	draw_set_font(fn_Ubuntu);
+	draw_set_halign(fa_left);
+	draw_text(pos_x, pos_y, "You have to\nget closer to\na workbench\nto craft!");
 }
 
 draw_reset();

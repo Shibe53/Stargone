@@ -5,7 +5,7 @@ if can_use
 	image_angle = rotation * obj_player.image_xscale;
 	image_xscale = sign(obj_player.image_xscale);
 
-	var _waterable = instance_nearest(x, y, obj_plants);
+	var _waterable = instance_nearest(obj_player.x - 30, obj_player.y - 50, obj_plants);
 	var _key_press = keyboard_check_pressed(ord("F"));
 
 	with (_waterable)

@@ -48,6 +48,7 @@
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
     {"id":{"name":"fnt_pause","path":"fonts/fnt_pause/fnt_pause.yy",},},
     {"id":{"name":"fnt_recipe_name","path":"fonts/fnt_recipe_name/fnt_recipe_name.yy",},},
+    {"id":{"name":"fnt_help","path":"fonts/fnt_help/fnt_help.yy",},},
     {"id":{"name":"fnt_recipe_req","path":"fonts/fnt_recipe_req/fnt_recipe_req.yy",},},
     {"id":{"name":"fnt_timer","path":"fonts/fnt_timer/fnt_timer.yy",},},
     {"id":{"name":"obj_asteroid_melon","path":"objects/obj_asteroid_melon/obj_asteroid_melon.yy",},},
