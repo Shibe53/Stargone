@@ -1,7 +1,4 @@
-PLAYING = 0;
-PAUSED = 1;
-
-state = PLAYING;
+state = "PLAYING";
 pausable = true;
 
 surface = surface_create(room_width, room_height);

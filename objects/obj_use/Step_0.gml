@@ -25,6 +25,12 @@ switch state
 					has_plant = true;
 					obj_player.held_item.can_use = true;
 					other.destroy = true;
+					if instance_exists(obj_tutorial)
+						if obj_tutorial.state = "PLANT"
+						{
+							obj_tutorial.state = "WATER";
+							plant.alarm_pause = true;
+						}
 					break;
 				}	
 			}

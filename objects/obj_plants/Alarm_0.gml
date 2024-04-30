@@ -21,6 +21,11 @@ else
 			image_index = 2;
 			state = "HARVEST";
 			alarm[0] = 60 * alarm_speed / 1.5;
+			if instance_exists(obj_tutorial)
+			{
+				obj_tutorial.state = "HARVEST";
+				alarm_pause = true;
+			}
 		} break;
 		
 		case "HARVEST":

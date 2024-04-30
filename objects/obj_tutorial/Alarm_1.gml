@@ -1,0 +1,1 @@
+tip = "To craft, open your inventory\nand approach the workbench";

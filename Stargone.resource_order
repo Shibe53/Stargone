@@ -26,10 +26,10 @@
   ],
   "ResourceOrderSettings":[
     {"name":"fn_Ubuntu","order":1,"path":"fonts/fn_Ubuntu/fn_Ubuntu.yy",},
+    {"name":"fnt_help","order":6,"path":"fonts/fnt_help/fnt_help.yy",},
     {"name":"fnt_menu","order":2,"path":"fonts/fnt_menu/fnt_menu.yy",},
     {"name":"fnt_pause","order":5,"path":"fonts/fnt_pause/fnt_pause.yy",},
     {"name":"fnt_recipe_name","order":4,"path":"fonts/fnt_recipe_name/fnt_recipe_name.yy",},
-    {"name":"fnt_help","order":6,"path":"fonts/fnt_help/fnt_help.yy",},
     {"name":"fnt_recipe_req","order":3,"path":"fonts/fnt_recipe_req/fnt_recipe_req.yy",},
     {"name":"obj_asteroid_melon","order":4,"path":"objects/obj_asteroid_melon/obj_asteroid_melon.yy",},
     {"name":"obj_button_controls_exit","order":6,"path":"objects/obj_button_controls_exit/obj_button_controls_exit.yy",},
@@ -50,6 +50,7 @@
     {"name":"obj_sun_flower","order":3,"path":"objects/obj_sun_flower/obj_sun_flower.yy",},
     {"name":"obj_title","order":5,"path":"objects/obj_title/obj_title.yy",},
     {"name":"obj_tree","order":11,"path":"objects/obj_tree/obj_tree.yy",},
+    {"name":"obj_tutorial","order":19,"path":"objects/obj_tutorial/obj_tutorial.yy",},
     {"name":"obj_use","order":13,"path":"objects/obj_use/obj_use.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"obj_workbench","order":9,"path":"objects/obj_workbench/obj_workbench.yy",},
@@ -93,5 +94,6 @@
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"spr_withered","order":36,"path":"sprites/spr_withered/spr_withered.yy",},
     {"name":"spr_workbench","order":28,"path":"sprites/spr_workbench/spr_workbench.yy",},
+    {"name":"spr_cursor","order":40,"path":"sprites/spr_cursor/spr_cursor.yy",},
   ],
 }
