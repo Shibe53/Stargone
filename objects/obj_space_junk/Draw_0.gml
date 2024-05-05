@@ -8,7 +8,7 @@ var _sec_string = string_replace(string_format(_sec, 2, 0), " ", "0");
 
 // Determine coordinates for the timer text to appear below the space junk
 var text_x = x + sprite_get_width(spr_space_junk) / 2; 
-var text_y = y + sprite_get_height(spr_space_junk) - 10; 
+var text_y = y + sprite_get_width(spr_space_junk); 
 
 // Draws the timer
 draw_set_font(fnt_timer_junk); 
@@ -19,10 +19,12 @@ draw_set_valign(fa_top);
 draw_sprite(spr_space_junk, 0, x, y);
 draw_set_color(c_yellow); 
 if (space_junk_visible = true) {
-    draw_text(text_x, text_y, "Done");
+    //draw_text(text_x, text_y, "Done");
+	text_drop_shadow(text_x, text_y, "Done", 1, 1, c_yellow, c_yellow, c_orange, 1, 1)
 } else {
     if (alarm[0] > 0) {
-        draw_text_transformed_color(text_x, text_y, _min_string + ":" + _sec_string, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
+        //draw_text_transformed_color(text_x, text_y, _min_string + ":" + _sec_string, 1, 1, 0, c_green, c_green, c_green, c_green, 1);
+		text_drop_shadow(text_x, text_y, _min_string + ":" + _sec_string, 1, 1, c_lime, c_lime, c_black, 2, 2)
     }   
 }
 

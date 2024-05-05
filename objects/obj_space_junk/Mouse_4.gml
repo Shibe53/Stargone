@@ -1,5 +1,5 @@
 // Check if the space junk is visible and the click is on object
-if (space_junk_visible = true && position_meeting(mouse_x, mouse_y, id)) {
+if (space_junk_visible = true && position_meeting(mouse_x, mouse_y, id) && distance_to_object(obj_player) < 50) {
     var seeds = [
         {name: "Sun Flower seed", sprite: spr_seed_sun_flower, tooltip: "Sun Flower seeds\nSEED\nDrops: Solar Juice\nTimer: 5 seconds"},  
         {name: "Galaxy Cactus seed", sprite: spr_seed_galaxy_cactus, tooltip: "Galaxy Cactus seeds\nSEED\nDrops: Space Dust\nTimer: 10 seconds"},
@@ -18,4 +18,12 @@ if (space_junk_visible = true && position_meeting(mouse_x, mouse_y, id)) {
     // Hide space junk and restart timer
     space_junk_visible = false;
     alarm[0] = 60 * 60;  // Restart the timer
+}
+
+if instance_exists(obj_tutorial)
+{
+	if obj_tutorial.state = "TRASH"
+	{
+		obj_tutorial.state = "FINISH";
+	}
 }

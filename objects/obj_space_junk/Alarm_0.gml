@@ -4,4 +4,5 @@ if space_junk_visible = false {
 } else {
     space_junk_visible = false;
     alarm[0] = 60 * 60;  // Restart the timer
+	selector_inst = noone;
 }

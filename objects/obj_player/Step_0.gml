@@ -58,16 +58,31 @@ x += xspd;
 y += yspd;
 
 // animation 
-if xspd != 0 or yspd != 0
+if xspd != 0
 {
-	sprite_index = spr_player_move;
+	sprite_index = spr_player_move_side;
+	
+	image_xscale = sign(xspd);
+} 
+else if yspd < 0
+{
+	sprite_index = spr_player_move_back;
 	
 	if xspd != 0
 	{
 		image_xscale = sign(xspd);
 	}
-} 
-else 
+}
+else if yspd > 0
+{
+	sprite_index = spr_player_move_front;
+	
+	if xspd != 0
+	{
+		image_xscale = sign(xspd);
+	}
+}
+else
 {
 	sprite_index = spr_player_idle;
 }

@@ -26,7 +26,7 @@ switch state
 	} break;
 	case "MORE WATER":
 	{
-		tip = "You have to water the plant 2 times\nbefore you can harvest";
+		tip = "You have to water the plant 2 times\nbefore you can harvest it";
 	} break;
 	case "HARVEST":
 	{
@@ -57,8 +57,24 @@ switch state
 		{
 			if keyboard_check_pressed(ord("E"))
 			{
-				instance_destroy();
+				state = "TRASH";
 			}
+		}
+	} break;
+	case "TRASH":
+	{
+		tip = "Every minute, you can get a\nseed from the trash collector";
+	} break;
+	case "FINISH":
+	{	
+		tip = "Enjoy the game!\nHere are some extra seeds";
+		if keyboard_check_pressed(ord("E"))
+		{
+			obj_inventory.inventory.item_add("Sun Flower seed", 2, spr_seed_sun_flower, true, "seed", "Sun Flower seeds\nSEED\nDrops: Solar Juice\nTimer: 5 seconds");
+			obj_inventory.inventory.item_add("Galaxy Cactus seed", 2, spr_seed_galaxy_cactus, true, "seed", "Galaxy Cactus seeds\nSEED\nDrops: Space Dust\nTimer: 10 seconds");
+			obj_inventory.inventory.item_add("Asteroid Melon seed", 2, spr_seed_asteroid_melon, true, "seed", "Asteroid Melon seeds\nSEED\nDrops: Clay Crust\nTimer: 30 seconds");
+			obj_inventory.inventory.item_add("Hell Flame seed", 2, spr_seed_hell_flame, true, "seed", "Hell Flame seeds\nSEED\nDrops: THC\nTimer: 5 seconds");
+			instance_destroy();
 		}
 	} break;
 }
