@@ -4,13 +4,14 @@ function Inventory() constructor {
 	
 	_inventory_items = [];
 	
-	item_set = function(_name, _quantity, _sprite, _usable, _role) {
+	item_set = function(_name, _quantity, _sprite, _usable, _role, _tooltip) {
 		array_push(_inventory_items, {
 			name: _name,
 			quantity: _quantity,
 			sprite: _sprite,
 			usable: _usable,
-			role: _role
+			role: _role,
+			tooltip: _tooltip
 		});
 	}
 	
@@ -24,13 +25,13 @@ function Inventory() constructor {
 		return -1;
 	}
 	
-	item_add = function(_name, _quantity, _sprite, _usable, _role) {
+	item_add = function(_name, _quantity, _sprite, _usable, _role, _tooltip) {
 		var index = item_find(_name);
 		
 		if(index >= 0) {
 			_inventory_items[index].quantity += _quantity;
 		} else {
-			item_set(_name, _quantity, _sprite, _usable, _role);
+			item_set(_name, _quantity, _sprite, _usable, _role, _tooltip);
 		}
 	}
 	

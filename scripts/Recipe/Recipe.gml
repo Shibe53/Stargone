@@ -52,11 +52,10 @@ function Recipe(): Inventory() constructor{
 			if(recipe_has(_name)){	
 				for(var requirement_index = 0; requirement_index < array_length(_recipies[index].requirements); requirement_index ++){
 					item_subtract(_recipies[index].requirements[requirement_index].name, _recipies[index].requirements[requirement_index].quantity);
-					
 				}
 			
 				for(var product_index = 0; product_index < array_length(_recipies[index].products);product_index++){
-					item_add(_recipies[index].products[product_index].name, _recipies[index].products[product_index].quantity, _recipies[index].products[product_index].sprite, _recipies[index].products[product_index].usable, _recipies[index].products[product_index].role);
+					item_add(_recipies[index].products[product_index].name, _recipies[index].products[product_index].quantity, _recipies[index].products[product_index].sprite, _recipies[index].products[product_index].usable, _recipies[index].products[product_index].role, _recipies[index].products[product_index].tooltip);
 				}
 			}
 		}

@@ -124,16 +124,32 @@ for (var row = 0; row < inventory_rows; row++) {
 				draw_reset();
 				if inventory_index <= array_length(inventory_items) - 1
 				{
+					// draw tooltip
+					draw_set_alpha(0.9);
 					draw_rectangle_color(
 						mx - 200,
 						my - 150,
 						mx - 5,
 						my - 5,
-						c_purple,
-						c_purple,
-						c_purple,
-						c_purple,
+						c_yellow,
+						c_yellow,
+						c_orange,
+						c_orange,
 						false
+					);
+					
+					text_align(fa_left, fa_top);
+					draw_set_alpha(1.0);
+					
+					draw_text_color(
+						mx - 200,
+						my - 150,
+						$"{inventory_items[inventory_index].tooltip}",
+						c_black,
+						c_black,
+						c_black,
+						c_black,
+						1
 					);
 				}
 			}
@@ -172,6 +188,7 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x + 32, obj_workbenc
 		draw_sprite(spr_Recipe_Box, 0, pos_x, pos_y);
 		draw_sprite(_recipies[recipe_index].sprite, 0, pos_x + 5, pos_y + 5);
 		
+		text_align(fa_center, fa_middle);
 		draw_set_font(fnt_recipe_name);
 		draw_set_halign(fa_left);
 		draw_text_color(pos_x + 83, pos_y + 16, _recipies[recipe_index].name, c_lime, c_lime, c_lime, c_lime, 1); // make constants with this stuff
@@ -199,18 +216,34 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x + 32, obj_workbenc
 				);
 			
 				draw_reset();
-				
-				draw_rectangle_color(
-					mx + 200,
-					my - 150,
-					mx + 5,
-					my - 5,
-					c_purple,
-					c_purple,
-					c_purple,
-					c_purple,
-					false
-				);
+				draw_set_font(-1);
+					// draw tooltip
+					draw_set_alpha(0.9);
+					draw_rectangle_color(
+						mx + 200,
+						my - 150,
+						mx + 5,
+						my + 5,
+						c_yellow,
+						c_yellow,
+						c_orange,
+						c_orange,
+						false
+					);
+					
+					text_align(fa_left, fa_top);
+					draw_set_alpha(1.0);
+					
+					draw_text_color(
+						mx + 5,
+						my - 150,
+						$"{_recipies[recipe_index].products[0].tooltip}",
+						c_black,
+						c_black,
+						c_black,
+						c_black,
+						1
+					);
 			}
 		}
 	}
@@ -221,6 +254,7 @@ else
 	var pos_y = ui_padding_y + (ui_border_size * 13) + 75;
 	draw_set_font(fn_Ubuntu);
 	draw_set_halign(fa_left);
+	draw_set_valign(fa_middle);
 	draw_text(pos_x, pos_y, "You have to\nget closer to\na workbench\nto craft!");
 }
 

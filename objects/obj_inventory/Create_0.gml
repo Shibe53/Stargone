@@ -3,10 +3,10 @@ randomize();
 
 inventory = new Recipe();
 
-inventory.item_add("Sun Flower seed", 10, spr_seed_sun_flower, true, "seed");
-inventory.item_add("Galaxy Cactus seed", 10, spr_seed_galaxy_cactus, true, "seed");
-inventory.item_add("Asteroid Melon seed", 10, spr_seed_asteroid_melon, true, "seed");
-inventory.item_add("Hell Flame seed", 10, spr_seed_hell_flame, true, "seed");
+//inventory.item_add("Sun Flower seed", 10, spr_seed_sun_flower, true, "seed", "aasasaaaaaa");
+//inventory.item_add("Galaxy Cactus seed", 10, spr_seed_galaxy_cactus, true, "seed", "aaaaaaaaaa");
+//inventory.item_add("Asteroid Melon seed", 10, spr_seed_asteroid_melon, true, "seed", "aaaaaaaaaaaaa");
+//inventory.item_add("Hell Flame seed", 10, spr_seed_hell_flame, true, "seed", "");
 
 // recipes
 inventory.recipe_add("Compost", [ 
@@ -18,7 +18,8 @@ inventory.recipe_add("Compost", [
 		quantity: 1,
 		sprite: spr_compost,
 		usable: true,
-		role: "tree"
+		role: "tree",
+		tooltip: "Compost\nTREE NUTRIENT\nYou can use this\nitem to help with the\ntree's growth!"
 	}], spr_compost);
 	
 inventory.recipe_add("Nebula Nourishment", [
@@ -34,7 +35,8 @@ inventory.recipe_add("Nebula Nourishment", [
 		quantity: 1, 
 		sprite: spr_nebula_nourishment,
 		usable: true,
-		role: "powerup"
+		role: "powerup",
+		tooltip: "Nebula Nourishment\nPOWERUP\nEffect: halves timer\nduration for a plant"
 	}], spr_nebula_nourishment);
 	
 inventory.recipe_add("Cosmic Cocktail", [
@@ -50,7 +52,8 @@ inventory.recipe_add("Cosmic Cocktail", [
 		quantity: 1, 
 		sprite: spr_cosmic_cocktail,
 		usable: true,
-		role: "drink"
+		role: "drink",
+		tooltip: "Cosmic Cocktail\nPOWERUP\nEffect: makes you\nwonky ;)"
 	}], spr_cosmic_cocktail);
 
 // UI INFORMATION //
