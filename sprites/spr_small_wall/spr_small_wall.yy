@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_spaceship_tileset_1_1",
-  "bboxMode":0,
-  "bbox_bottom":319,
+  "%Name":"spr_small_wall",
+  "bboxMode":2,
+  "bbox_bottom":63,
   "bbox_left":0,
-  "bbox_right":447,
+  "bbox_right":35,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2e1e3801-be3a-4831-a39d-ae05ed8a7868","name":"2e1e3801-be3a-4831-a39d-ae05ed8a7868","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"95b69239-2ef1-47c4-a7ec-e21e5926564e","name":"95b69239-2ef1-47c4-a7ec-e21e5926564e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":64,
-  "gridY":64,
-  "height":512,
+  "gridX":0,
+  "gridY":0,
+  "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"c6e844de-51c8-4115-8774-5de7cb7373a4","blendMode":0,"displayName":"default","isLocked":false,"name":"c6e844de-51c8-4115-8774-5de7cb7373a4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"0b001e47-d376-48da-8be0-480e9d607ade","blendMode":0,"displayName":"default","isLocked":false,"name":"0b001e47-d376-48da-8be0-480e9d607ade","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_spaceship_tileset_1_1",
+  "name":"spr_small_wall",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_spaceship_tileset_1_1",
+    "%Name":"spr_small_wall",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_spaceship_tileset_1_1",
+    "name":"spr_small_wall",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e1e3801-be3a-4831-a39d-ae05ed8a7868","path":"sprites/spr_spaceship_tileset_1_1/spr_spaceship_tileset_1_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"10cd57e8-0ca6-4e99-bb4b-868f36c5773f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"95b69239-2ef1-47c4-a7ec-e21e5926564e","path":"sprites/spr_small_wall/spr_small_wall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"33c8f25a-7fda-4487-ba4d-99a69d3c4620","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":512,
+  "width":64,
 }

@@ -1,17 +1,27 @@
 switch state
 {
-	case "SPROUTLING":
+	case "TWIG":
 	{
 		image_index = 0;
 	} break;
 	
-	case "LIL TREE":
+	case "SPROUTLING":
 	{
 		image_index = 1;
 	} break;
 	
-	case "BIG TREE":
+	case "LIL TREE":
 	{
 		image_index = 2;
+	} break;
+	
+	case "BIG TREE":
+	{
+		image_index = 3;
+	} break;
+	
+	case "HUGE TREE":
+	{
+		image_index = 4;
 	} break;
 }

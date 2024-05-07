@@ -1,2 +1,3 @@
 image_index = 0;
-state = "SPROUTLING";
+state = "TWIG";
+compost_used = 0;

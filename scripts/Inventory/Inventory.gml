@@ -70,6 +70,7 @@ function Inventory() constructor {
 			state = other._inventory_items[_index].role;
 			sprite = other._inventory_items[_index].sprite;
 			item = other._inventory_items[_index].name;
+			tooltip = other._inventory_items[_index].tooltip;
 			
 			switch item
 			{

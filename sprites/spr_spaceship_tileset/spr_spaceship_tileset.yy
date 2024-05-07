@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_spaceship_tileset",
   "bboxMode":0,
-  "bbox_bottom":255,
+  "bbox_bottom":319,
   "bbox_left":0,
-  "bbox_right":255,
+  "bbox_right":447,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":64,
   "gridY":64,
-  "height":256,
+  "height":512,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"c6e844de-51c8-4115-8774-5de7cb7373a4","blendMode":0,"displayName":"default","isLocked":false,"name":"c6e844de-51c8-4115-8774-5de7cb7373a4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":256,
+  "width":512,
 }

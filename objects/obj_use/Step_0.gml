@@ -77,7 +77,7 @@ switch state
 			var _dist = distance_to_object(obj_player);
 	
 			// in range?
-			if _dist < other.break_distance + 10 and state != "BIG TREE"
+			if _dist < other.break_distance + 10 and state != "HUGE TREE"
 			{
 				// get selected
 				other.selector_inst = id;
@@ -87,14 +87,44 @@ switch state
 				{
 					switch state
 					{
-						case "SPROUTLING":
+						case "TWIG":
 						{
-							state = "LIL TREE";
+							compost_used++;
+							if compost_used >= 1
+							{
+								state = "SPROUTLING";
+								compost_used = 0;
+							}
 						} break;
 	
+						case "SPROUTLING":
+						{
+							compost_used++;
+							if compost_used >= 2
+							{
+								state = "LIL TREE";
+								compost_used = 0;
+							}
+						} break;
+						
 						case "LIL TREE":
 						{
-							state = "BIG TREE";
+							compost_used++;
+							if compost_used >= 2
+							{
+								state = "BIG TREE";
+								compost_used = 0;
+							}
+						} break;
+						
+						case "BIG TREE":
+						{
+							compost_used++;
+							if compost_used >= 3
+							{
+								state = "HUGE TREE";
+								compost_used = 0;
+							}
 						} break;
 					}
 					
