@@ -5,7 +5,7 @@ if alarm_pause
 
 if instance_exists(obj_tutorial)
 {
-	if keyboard_check_pressed(ord("F")) and obj_tutorial.state = "WATER"
+	if keyboard_check_pressed(vk_space) and obj_tutorial.state = "WATER"
 	{
 		obj_tutorial.state = "MORE WATER";
 		alarm_pause = false;

@@ -22,7 +22,7 @@ switch state
 	}
 	case "WATER":
 	{
-		tip = "Water the plant by pressing F\nDo so before the timer runs out!";
+		tip = "Water the plant by pressing SPACE\nDo so before the timer runs out!";
 	} break;
 	case "MORE WATER":
 	{
@@ -34,12 +34,12 @@ switch state
 	} break;
 	case "HARVESTED":
 	{
-		tip = "Press F to harvest the plant";
+		tip = "Press SPACE to harvest the plant";
 		state = "WITHER";
 	} break;
 	case "WITHER":
 	{
-		if keyboard_check_pressed(ord("F"))
+		if keyboard_check_pressed(vk_space)
 		{
 			tip = "If a timer ends, the plant will wither\nUse the shovel to remove it";
 			alarm[0] = 60 * 6;
@@ -63,11 +63,11 @@ switch state
 	} break;
 	case "TRASH":
 	{
-		tip = "Every minute, you can get a\nseed from the trash collector";
+		tip = "Every minute, you can get a seed\nfrom the trash collector (right room)";
 	} break;
 	case "FINISH":
 	{	
-		tip = "Enjoy the game!\nHere are some extra seeds";
+		tip = "Enjoy the game!\nHere are some extra seeds :)";
 		if keyboard_check_pressed(ord("E"))
 		{
 			obj_inventory.inventory.item_add("Sun Flower seed", 2, spr_seed_sun_flower, true, "seed", "Sun Flower seeds\nSEED\nDrops: Solar Juice\nTimer: 5 seconds");

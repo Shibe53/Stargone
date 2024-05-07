@@ -6,7 +6,7 @@ if can_use
 	image_xscale = sign(obj_player.image_xscale);
 
 	var _waterable = instance_nearest(obj_player.x - 30, obj_player.y - 50, obj_plants);
-	var _key_press = keyboard_check_pressed(ord("F"));
+	var _key_press = keyboard_check_pressed(vk_space);
 
 	with (_waterable)
 	{

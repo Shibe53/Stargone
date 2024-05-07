@@ -1,1 +1,1 @@
-tip = "To craft, open your inventory\nand approach the workbench";
+tip = "To craft, approach the workbench\n(left room) and open your inventory";
