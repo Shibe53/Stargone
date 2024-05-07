@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_workbench",
-  "bboxMode":2,
-  "bbox_bottom":126,
-  "bbox_left":2,
-  "bbox_right":61,
+  "%Name":"spr_spaceship_tileset_1_1",
+  "bboxMode":0,
+  "bbox_bottom":319,
+  "bbox_left":0,
+  "bbox_right":447,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b60b2d38-c833-4f05-bad8-84a113f47fbe","name":"b60b2d38-c833-4f05-bad8-84a113f47fbe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"2e1e3801-be3a-4831-a39d-ae05ed8a7868","name":"2e1e3801-be3a-4831-a39d-ae05ed8a7868","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
-  "height":64,
+  "gridX":64,
+  "gridY":64,
+  "height":512,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"3d2e0e4a-5bba-4665-8678-ad5737f30afa","blendMode":0,"displayName":"default","isLocked":false,"name":"3d2e0e4a-5bba-4665-8678-ad5737f30afa","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c6e844de-51c8-4115-8774-5de7cb7373a4","blendMode":0,"displayName":"default","isLocked":false,"name":"c6e844de-51c8-4115-8774-5de7cb7373a4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_workbench",
+  "name":"spr_spaceship_tileset_1_1",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_workbench",
+    "%Name":"spr_spaceship_tileset_1_1",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_workbench",
+    "name":"spr_spaceship_tileset_1_1",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b60b2d38-c833-4f05-bad8-84a113f47fbe","path":"sprites/spr_workbench/spr_workbench.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"84331c11-1b6b-4859-b729-6debe1354f60","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e1e3801-be3a-4831-a39d-ae05ed8a7868","path":"sprites/spr_spaceship_tileset_1_1/spr_spaceship_tileset_1_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"10cd57e8-0ca6-4e99-bb4b-868f36c5773f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":128,
+  "width":512,
 }
