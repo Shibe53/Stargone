@@ -31,6 +31,7 @@
     {"name":"fnt_pause","order":5,"path":"fonts/fnt_pause/fnt_pause.yy",},
     {"name":"fnt_recipe_name","order":4,"path":"fonts/fnt_recipe_name/fnt_recipe_name.yy",},
     {"name":"fnt_recipe_req","order":3,"path":"fonts/fnt_recipe_req/fnt_recipe_req.yy",},
+    {"name":"fnt_small","order":8,"path":"fonts/fnt_small/fnt_small.yy",},
     {"name":"fnt_timer_junk","order":7,"path":"fonts/fnt_timer_junk/fnt_timer_junk.yy",},
     {"name":"obj_asteroid_melon","order":4,"path":"objects/obj_asteroid_melon/obj_asteroid_melon.yy",},
     {"name":"obj_button_controls_exit","order":6,"path":"objects/obj_button_controls_exit/obj_button_controls_exit.yy",},
@@ -103,9 +104,9 @@
     {"name":"spr_space_junk","order":24,"path":"sprites/spr_space_junk/spr_space_junk.yy",},
     {"name":"spr_spaceship_tileset","order":29,"path":"sprites/spr_spaceship_tileset/spr_spaceship_tileset.yy",},
     {"name":"spr_thc","order":3,"path":"sprites/spr_thc/spr_thc.yy",},
+    {"name":"spr_tooltip","order":34,"path":"sprites/spr_tooltip/spr_tooltip.yy",},
     {"name":"spr_tree","order":27,"path":"sprites/spr_tree/spr_tree.yy",},
     {"name":"spr_withered","order":17,"path":"sprites/spr_withered/spr_withered.yy",},
     {"name":"spr_workbench","order":28,"path":"sprites/spr_workbench/spr_workbench.yy",},
-    {"name":"spr_tooltip","order":34,"path":"sprites/spr_tooltip/spr_tooltip.yy",},
   ],
 }

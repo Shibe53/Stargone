@@ -1,0 +1,1 @@
+global.selection_box_active = true;
