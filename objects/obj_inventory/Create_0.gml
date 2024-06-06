@@ -3,10 +3,7 @@ randomize();
 
 inventory = new Recipe();
 
-//inventory.item_add("Sun Flower seed", 2, spr_seed_sun_flower, true, "seed", "Sun Flower seeds\nSEED\nDrops: Solar Juice\nTimer: 5 seconds");
-inventory.item_add("Galaxy Cactus seed", 2, spr_seed_galaxy_cactus, true, "seed", "Galaxy Cactus seeds\nSEED\nDrops: Space Dust\nTimer: 10 seconds");
-//inventory.item_add("Asteroid Melon seed", 2, spr_seed_asteroid_melon, true, "seed", "Asteroid Melon seeds\nSEED\nDrops: Clay Crust\nTimer: 30 seconds");
-//inventory.item_add("Hell Flame seed", 2, spr_seed_hell_flame, true, "seed", "Hell Flame seeds\nSEED\nDrops: THC\nTimer: 5 seconds");
+inventory.item_add("Galaxy Cactus seed", 2, spr_seed_galaxy_cactus, true, "seed", "SEED\nDrops: Space Dust\nTimer: 10 seconds");
 
 // recipes
 inventory.recipe_add("Compost", [ 
@@ -19,7 +16,7 @@ inventory.recipe_add("Compost", [
 		sprite: spr_compost,
 		usable: true,
 		role: "tree",
-		tooltip: "Compost\nTREE NUTRIENT\nYou can use this\nitem to help with the\ntree's growth!"
+		tooltip: "TREE NUTRIENT\nYou can use this\nitem to help with the\ntree's growth!"
 	}], spr_compost);
 	
 inventory.recipe_add("Nebula Nourishment", [
@@ -36,7 +33,7 @@ inventory.recipe_add("Nebula Nourishment", [
 		sprite: spr_nebula_nourishment,
 		usable: true,
 		role: "powerup",
-		tooltip: "Nebula Nourishment\nPOWERUP\nEffect: halves timer\nduration for a plant"
+		tooltip: "POWERUP\nEffect: halves timer\nduration for a plant"
 	}], spr_nebula_nourishment);
 	
 inventory.recipe_add("Cosmic Cocktail", [
@@ -53,23 +50,23 @@ inventory.recipe_add("Cosmic Cocktail", [
 		sprite: spr_cosmic_cocktail,
 		usable: true,
 		role: "drink",
-		tooltip: "Cosmic Cocktail\nPOWERUP\nEffect: makes you\nwonky ;)"
+		tooltip: "POWERUP\nEffect: makes you\nwonky ;)"
 	}], spr_cosmic_cocktail);
 
 // UI INFORMATION //
 
 display_set_gui_size(1280, 720);
 
-inventory_columns = 9;
-inventory_rows = 5;
+inventory_columns = 5;
+inventory_rows = 3;
 
-ui_padding_x = 64;
-ui_padding_y = 64;
+ui_padding_x = 128;
+ui_padding_y = 128;
 ui_panel_left = 320;
 ui_border_size = 8;
-ui_inventory_padding = 48;
-ui_inventory_box = 64;
-ui_inventory_margin = 16;
+ui_inventory_padding = 80;
+ui_inventory_box = 80;
+ui_inventory_margin = 26;
 
 color_background = #55507a;
 color_border = #36234a;

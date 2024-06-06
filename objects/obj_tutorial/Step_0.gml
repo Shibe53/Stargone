@@ -70,10 +70,10 @@ switch state
 		tip = "Enjoy the game!\nHere are some extra seeds :)";
 		if keyboard_check_pressed(ord("E"))
 		{
-			obj_inventory.inventory.item_add("Sun Flower seed", 2, spr_seed_sun_flower, true, "seed", "Sun Flower seeds\nSEED\nDrops: Solar Juice\nTimer: 5 seconds");
-			obj_inventory.inventory.item_add("Galaxy Cactus seed", 2, spr_seed_galaxy_cactus, true, "seed", "Galaxy Cactus seeds\nSEED\nDrops: Space Dust\nTimer: 10 seconds");
-			obj_inventory.inventory.item_add("Asteroid Melon seed", 2, spr_seed_asteroid_melon, true, "seed", "Asteroid Melon seeds\nSEED\nDrops: Clay Crust\nTimer: 30 seconds");
-			obj_inventory.inventory.item_add("Hell Flame seed", 2, spr_seed_hell_flame, true, "seed", "Hell Flame seeds\nSEED\nDrops: THC\nTimer: 5 seconds");
+			obj_inventory.inventory.item_add("Sun Flower seed", 2, spr_seed_sun_flower, true, "seed", "SEED\nDrops: Solar Juice\nTimer: 5 seconds");
+			obj_inventory.inventory.item_add("Galaxy Cactus seed", 2, spr_seed_galaxy_cactus, true, "seed", "SEED\nDrops: Space Dust\nTimer: 10 seconds");
+			obj_inventory.inventory.item_add("Asteroid Melon seed", 2, spr_seed_asteroid_melon, true, "seed", "SEED\nDrops: Clay Crust\nTimer: 30 seconds");
+			obj_inventory.inventory.item_add("Hell Flame seed", 2, spr_seed_hell_flame, true, "seed", "SEED\nDrops: THC\nTimer: 5 seconds");
 			instance_destroy();
 		}
 	} break;
@@ -81,12 +81,12 @@ switch state
 
 if keyboard_check_pressed(ord("L"))
 {
-	obj_inventory.inventory.item_add("Sun Flower seed", 10, spr_seed_sun_flower, true, "seed", "Sun Flower seeds\nSEED\nDrops: Solar Juice\nTimer: 5 seconds");
-	obj_inventory.inventory.item_add("Galaxy Cactus seed", 10, spr_seed_galaxy_cactus, true, "seed", "Galaxy Cactus seeds\nSEED\nDrops: Space Dust\nTimer: 10 seconds");
-	obj_inventory.inventory.item_add("Asteroid Melon seed", 10, spr_seed_asteroid_melon, true, "seed", "Asteroid Melon seeds\nSEED\nDrops: Clay Crust\nTimer: 30 seconds");
-	obj_inventory.inventory.item_add("Hell Flame seed", 10, spr_seed_hell_flame, true, "seed", "Hell Flame seeds\nSEED\nDrops: THC\nTimer: 5 seconds");
-	obj_inventory.inventory.item_add("Nebula Nourishment", 10, spr_nebula_nourishment, true, "powerup", "Nebula Nourishment\nPOWERUP\nEffect: halves timer\nduration for a plant");
-	obj_inventory.inventory.item_add("Cosmic Cocktail", 10, spr_cosmic_cocktail, true, "drink", "Cosmic Cocktail\nPOWERUP\nEffect: makes you\nwonky ;)");
-	obj_inventory.inventory.item_add("Compost", 10, spr_compost, true, "tree", "Compost\nTREE NUTRIENT\nYou can use this\nitem to help with the\ntree's growth!");
+	obj_inventory.inventory.item_add("Sun Flower seed", 10, spr_seed_sun_flower, true, "seed", "SEED\nDrops: Solar Juice\nTimer: 5 seconds");
+	obj_inventory.inventory.item_add("Galaxy Cactus seed", 10, spr_seed_galaxy_cactus, true, "seed", "SEED\nDrops: Space Dust\nTimer: 10 seconds");
+	obj_inventory.inventory.item_add("Asteroid Melon seed", 10, spr_seed_asteroid_melon, true, "seed", "SEED\nDrops: Clay Crust\nTimer: 30 seconds");
+	obj_inventory.inventory.item_add("Hell Flame seed", 10, spr_seed_hell_flame, true, "seed", "SEED\nDrops: THC\nTimer: 5 seconds");
+	obj_inventory.inventory.item_add("Nebula Nourishment", 10, spr_nebula_nourishment, true, "powerup", "POWERUP\nEffect: halves timer\nduration for a plant");
+	obj_inventory.inventory.item_add("Cosmic Cocktail", 10, spr_cosmic_cocktail, true, "drink", "POWERUP\nEffect: makes you\nwonky ;)");
+	obj_inventory.inventory.item_add("Compost", 10, spr_compost, true, "tree", "TREE NUTRIENT\nYou can use this\nitem to help with the\ntree's growth!");
 	instance_destroy();
 }

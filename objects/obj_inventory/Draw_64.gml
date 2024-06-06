@@ -81,7 +81,7 @@ var mx = device_mouse_x_to_gui(0);
 var my = device_mouse_y_to_gui(0);
 
 // draw inventory place holders
-inventory_items = inventory.item_get();
+var inventory_items = inventory.item_get();
 for (var row = 0; row < inventory_rows; row++) {
 	var pos_y = ui_padding_y + (ui_border_size * 13) +
 	(row * (ui_inventory_margin + ui_inventory_box));
@@ -107,7 +107,7 @@ for (var row = 0; row < inventory_rows; row++) {
 		var inventory_index = (row * inventory_columns) + column;
 		if(inventory_index <= array_length(inventory_items) - 1) {
 			// draw inventory sprite
-			draw_sprite(inventory_items[inventory_index].sprite, 0, pos_x + 5, pos_y + 5);
+			draw_sprite(inventory_items[inventory_index].sprite, 0, pos_x + 13, pos_y + 13);
 		}
 		
 		// if our mouse is between one of the columns let's highlight it
@@ -125,6 +125,7 @@ for (var row = 0; row < inventory_rows; row++) {
 				if inventory_index <= array_length(inventory_items) - 1
 				{
 					// draw tooltip
+					/*
 					draw_set_alpha(0.9);
 					draw_rectangle_color(
 						mx - 200,
@@ -136,14 +137,26 @@ for (var row = 0; row < inventory_rows; row++) {
 						c_orange,
 						c_orange,
 						false
-					);
+					);*/
+					draw_sprite_ext(spr_tooltip, 1, mx - 240, my - 150, 1.2, 0.8, 0, c_white, 1);
 					
 					text_align(fa_left, fa_top);
 					draw_set_alpha(1.0);
 					
 					draw_text_color(
-						mx - 200,
-						my - 150,
+						mx - 225,
+						my - 145,
+						$"{inventory_items[inventory_index].name}",
+						c_purple,
+						c_purple,
+						c_purple,
+						c_purple,
+						1
+					);
+
+					draw_text_color(
+						mx - 225,
+						my - 125,
 						$"{inventory_items[inventory_index].tooltip}",
 						c_black,
 						c_black,
@@ -210,15 +223,15 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x + 32, obj_workbenc
 				draw_rectangle(
 					pos_x,
 					pos_y,
-					pos_x + ui_panel_left - 32,
-					pos_y + ui_inventory_box + 10,
+					pos_x + ui_panel_left - 30,
+					pos_y + ui_inventory_box - 5,
 					false
 				);
 			
 				draw_reset();
 				draw_set_font(-1);
 					// draw tooltip
-					draw_set_alpha(0.9);
+					/*(0.9);
 					draw_rectangle_color(
 						mx + 200,
 						my - 150,
@@ -237,6 +250,33 @@ if point_distance(obj_player.x, obj_player.y, obj_workbench.x + 32, obj_workbenc
 					draw_text_color(
 						mx + 5,
 						my - 150,
+						$"{_recipies[recipe_index].products[0].tooltip}",
+						c_black,
+						c_black,
+						c_black,
+						c_black,
+						1
+					);*/
+					
+					draw_sprite_ext(spr_tooltip, 1, mx, my - 150, 1.2, 0.8, 0, c_white, 1);
+					
+					text_align(fa_left, fa_top);
+					draw_set_alpha(1.0);
+					
+					draw_text_color(
+						mx + 15,
+						my - 145,
+						$"{_recipies[recipe_index].products[0].name}",
+						c_purple,
+						c_purple,
+						c_purple,
+						c_purple,
+						1
+					);
+
+					draw_text_color(
+						mx + 15,
+						my - 125,
 						$"{_recipies[recipe_index].products[0].tooltip}",
 						c_black,
 						c_black,
