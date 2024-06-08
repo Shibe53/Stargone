@@ -7,8 +7,7 @@ if (space_junk_visible = true && alarm[0] <= 0 && position_meeting(mouse_x, mous
         {name: "Hell Flame seed", sprite: spr_seed_hell_flame, tooltip: "SEED\nDrops: THC\nTimer: 5 seconds"}
     ];
 	
-	alarm[1] = 60 * 0.5;
-    global.show_selection_box = true
+	alarm[1] = 60 * 0.25;
 	
 	// Show the selection box
     show_selection_box = true;

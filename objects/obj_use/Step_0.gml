@@ -93,6 +93,7 @@ switch state
 							if compost_used >= 1
 							{
 								state = "SPROUTLING";
+								instance_create_layer(x, y, "GUI", obj_d_tree_init);
 								compost_used = 0;
 							}
 						} break;

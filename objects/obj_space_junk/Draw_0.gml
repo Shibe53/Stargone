@@ -48,8 +48,9 @@ if (global.show_selection_box) {
     draw_set_color(c_grey);
     draw_rectangle(box_x, box_y, box_x + box_width, box_y + box_height, false);
 
-    //scale factor to reduce the size of the sprites and boxes
-    var scale_factor = 0.5;
+//scale factor to reduce the size of the sprites and boxes
+    var scale_factor = 0.4;
+    var scale_factor_2 = 0.5;
     var seed_box_spacing = 40; //space between each seed box
 
     //draw seed options inside the box, including empty boxes for future items
@@ -71,11 +72,11 @@ if (global.show_selection_box) {
             var seed = global.seeds[i];
 
             //calculate center position of inventory box to draw the seed sprite with scaling
-            var seed_sprite_x = seed_box_x + (sprite_get_width(spr_Inventory_Box) * scale_factor - sprite_get_width(seed.sprite) * scale_factor) / 2;
-            var seed_sprite_y = seed_box_y + (sprite_get_height(spr_Inventory_Box) * scale_factor - sprite_get_height(seed.sprite) * scale_factor) / 2;
+            var seed_sprite_x = seed_box_x + (sprite_get_width(spr_Inventory_Box) * scale_factor - sprite_get_width(seed.sprite) * scale_factor_2) / 2;
+            var seed_sprite_y = seed_box_y + (sprite_get_height(spr_Inventory_Box) * scale_factor - sprite_get_height(seed.sprite) * scale_factor_2) / 2;
 
             //draw seed sprite centered in the inventory box with scaling
-            draw_sprite_ext(seed.sprite, 0, seed_sprite_x, seed_sprite_y, scale_factor, scale_factor, 0, c_white, 1);
+            draw_sprite_ext(seed.sprite, 0, seed_sprite_x, seed_sprite_y, scale_factor_2, scale_factor_2, 0, c_white, 1); 
 
             //draw seed name next to sprite box
             var text_x = seed_box_x + sprite_get_width(spr_Inventory_Box) * scale_factor + 4;
@@ -88,33 +89,38 @@ if (global.show_selection_box) {
         }
     }
 
-    //check if individual seed box is clicked
+//check if individual seed box is clicked
     if (mouse_check_button_pressed(mb_left)) {
         var mousex = device_mouse_x(0); 
         var mousey = device_mouse_y(0); 
 
-        for (var i = 0; i < total_boxes; i++) {
-            var seed_box_x = box_x + 10;
-            var seed_box_y = box_y + 10 + (i - global.scroll_offset) * seed_box_spacing;
+        // Check if the click is within the grey box bounds
+        if (mousex > box_x && mousex < box_x + box_width &&
+            mousey > box_y + 10 && mousey < box_y + box_height - 10) {
 
-            if (mousex > seed_box_x && mousex < seed_box_x + sprite_get_width(spr_Inventory_Box) * scale_factor &&
-                mousey > seed_box_y && mousey < seed_box_y + sprite_get_height(spr_Inventory_Box) * scale_factor) {
+            for (var i = 0; i < total_boxes; i++) {
+                var seed_box_x = box_x + 10;
+                var seed_box_y = box_y + 10 + (i - global.scroll_offset) * seed_box_spacing;
 
-                if (i < array_length(global.seeds)) {
-                    //box clicked, restart alarm + hide seed box
-                    global.selection_box_active = false;
-                    global.show_selection_box = false;
-                    alarm[0] = 60 * 10;
+                if (mousex > seed_box_x && mousex < seed_box_x + sprite_get_width(spr_Inventory_Box) * scale_factor &&
+                    mousey > seed_box_y && mousey < seed_box_y + sprite_get_height(spr_Inventory_Box) * scale_factor) {
 
-                    //add the selected seed to the inventory
-                    var chosen_seed = global.seeds[i];
-                    obj_inventory.inventory.item_add(chosen_seed.name, 1, chosen_seed.sprite, true, "seed", chosen_seed.tooltip);
-               
-			   //otherwise stop timer + seed box still visible
-			   } else if (global.selection_box_active && global.show_selection_box) {
-                    alarm[0] = -1;
+                    if (i < array_length(global.seeds)) {
+                        //box clicked, restart alarm + hide seed box
+                        global.selection_box_active = false;
+                        global.show_selection_box = false;
+                        alarm[0] = 60 * 10;
+
+                        //add the selected seed to the inventory
+                        var chosen_seed = global.seeds[i];
+                        obj_inventory.inventory.item_add(chosen_seed.name, 1, chosen_seed.sprite, true, "seed", chosen_seed.tooltip);
+
+                   //otherwise stop timer + seed box still visible
+                   } else if (global.selection_box_active && global.show_selection_box) {
+                        alarm[0] = -1;
+                    }
+                    break;
                 }
-                break;
             }
         }
     }

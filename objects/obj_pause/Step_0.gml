@@ -7,9 +7,9 @@ if (_key_press) and pausable
         // Let's pause the game
         surface_copy(surface, 0, 0, application_surface);
         instance_deactivate_all(true);
-		instance_create_layer(camera_get_view_x(view_camera[0]) + 330, camera_get_view_y(view_camera[0]) + 310, "instances", obj_button_quit);
-        //instance_create_layer(camera_get_view_x(view_camera[0]) + 330, camera_get_view_y(view_camera[0]) + 230, "instances", obj_button_controls);
-		var play = instance_create_layer(camera_get_view_x(view_camera[0]) + 330, camera_get_view_y(view_camera[0]) + 150, "instances", obj_button_play);
+		instance_create_layer(camera_get_view_x(view_camera[0]) + 330, camera_get_view_y(view_camera[0]) + 310, "GUI", obj_button_quit);
+        //instance_create_layer(camera_get_view_x(view_camera[0]) + 330, camera_get_view_y(view_camera[0]) + 230, "GUI", obj_button_controls);
+		var play = instance_create_layer(camera_get_view_x(view_camera[0]) + 330, camera_get_view_y(view_camera[0]) + 150, "GUI", obj_button_play);
 		play.button_text = "Resume";
 		state = "PAUSED";
     }
