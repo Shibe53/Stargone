@@ -60,7 +60,7 @@ y += yspd;
 // animation 
 if xspd != 0
 {
-	sprite_index = spr_player_move_side;
+	sprite_index = spr_player_move_side_old;
 	
 	image_xscale = sign(xspd);
 } 
