@@ -74,6 +74,7 @@ switch state
 			obj_inventory.inventory.item_add("Galaxy Cactus seed", 2, spr_seed_galaxy_cactus, true, "seed", "SEED\nDrops: Space Dust\nTimer: 10 seconds");
 			obj_inventory.inventory.item_add("Asteroid Melon seed", 2, spr_seed_asteroid_melon, true, "seed", "SEED\nDrops: Clay Crust\nTimer: 30 seconds");
 			obj_inventory.inventory.item_add("Hell Flame seed", 2, spr_seed_hell_flame, true, "seed", "SEED\nDrops: THC\nTimer: 5 seconds");
+			instance_create_layer(x, y, "GUI", obj_d_tree_init);
 			instance_destroy();
 		}
 	} break;

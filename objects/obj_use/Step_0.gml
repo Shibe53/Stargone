@@ -93,7 +93,7 @@ switch state
 							if compost_used >= 1
 							{
 								state = "SPROUTLING";
-								instance_create_layer(x, y, "GUI", obj_d_tree_init);
+								instance_create_layer(x, y, "GUI", obj_d_tree_first);
 								compost_used = 0;
 							}
 						} break;
@@ -104,6 +104,7 @@ switch state
 							if compost_used >= 2
 							{
 								state = "LIL TREE";
+								instance_create_layer(x, y, "GUI", obj_d_tree_second);
 								compost_used = 0;
 							}
 						} break;
@@ -114,6 +115,7 @@ switch state
 							if compost_used >= 2
 							{
 								state = "BIG TREE";
+								instance_create_layer(x, y, "GUI", obj_d_tree_third);
 								compost_used = 0;
 							}
 						} break;
@@ -124,6 +126,7 @@ switch state
 							if compost_used >= 3
 							{
 								state = "HUGE TREE";
+								instance_create_layer(x, y, "GUI", obj_d_tree_final);
 								compost_used = 0;
 							}
 						} break;

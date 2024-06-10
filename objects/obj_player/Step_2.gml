@@ -1,8 +1,9 @@
 // change held item position
 if instance_exists(held_item)
 {
-	held_item.x = x - 3 * image_xscale;
-	held_item.y = y + 3;
+	held_item.x = x - 10 * image_xscale;
+	held_item.y = y - 15;
+	held_item.depth = obj_player.depth - 3;
 }
 
 // manual camera implementation

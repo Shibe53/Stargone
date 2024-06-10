@@ -7,7 +7,7 @@ if (space_junk_visible = true && alarm[0] <= 0 && position_meeting(mouse_x, mous
         {name: "Hell Flame seed", sprite: spr_seed_hell_flame, tooltip: "SEED\nDrops: THC\nTimer: 5 seconds"}
     ];
 	
-	alarm[1] = 60 * 0.25;
+	alarm[1] = 60 * 0.1;
 	
 	// Show the selection box
     show_selection_box = true;
@@ -21,17 +21,17 @@ if (space_junk_visible = true && alarm[0] <= 0 && position_meeting(mouse_x, mous
 
     // Hide space junk and restart timer
     space_junk_visible = false;
+	
+	if instance_exists(obj_tutorial)
+	{
+		if obj_tutorial.state = "TRASH"
+		{
+			obj_tutorial.state = "FINISH";
+		}
+	}
 }
 
 // Disable other interactions when the box is shown
 if (show_selection_box) {
     exit;
-}
-
-if instance_exists(obj_tutorial)
-{
-	if obj_tutorial.state = "TRASH"
-	{
-		obj_tutorial.state = "FINISH";
-	}
 }

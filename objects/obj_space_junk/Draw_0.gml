@@ -48,6 +48,35 @@ if (global.show_selection_box) {
     draw_set_color(c_grey);
     draw_rectangle(box_x, box_y, box_x + box_width, box_y + box_height, false);
 
+	//draw the scrollbar
+	var scrollbar_x = box_x + box_width - scrollbar_width - 4;
+	var scrollbar_y = box_y + 8;
+	var scrollbar_height = box_height - 16;
+	var visible_items = 3; //number of items that fit without scrolling
+	var total_items = array_length(global.seeds) + 3; //including 3 extra empty boxes
+	var max_scroll_offset = max(0, total_items - visible_items);
+	var scrollbar_slider_height = max(20, scrollbar_height * (visible_items / total_items)); 
+
+	//draw the scrollbar outline
+	draw_set_color(c_black);
+	draw_rectangle(scrollbar_x -2, scrollbar_y -2, scrollbar_x + scrollbar_width +2, scrollbar_y + scrollbar_height+2, false);
+
+	//draw the scrollbar background
+	draw_set_color(c_dkgray);
+	draw_rectangle(scrollbar_x, scrollbar_y, scrollbar_x + scrollbar_width, scrollbar_y + scrollbar_height, false);
+
+	//calculate the slider's position based on scroll offset
+	var slider_position = (global.scroll_offset / max_scroll_offset) * (scrollbar_height - scrollbar_slider_height);
+	var slider_y = scrollbar_y + slider_position;
+
+	//draw the scrollbar slider outline
+	draw_set_color(c_purple);
+	draw_rectangle(scrollbar_x +1, slider_y +1, scrollbar_x + scrollbar_width -1, slider_y + scrollbar_slider_height -1, false);
+
+	//draw the scrollbar slider background
+	draw_set_color(c_black);
+	draw_rectangle(scrollbar_x +2, slider_y +2, scrollbar_x + scrollbar_width -2, slider_y + scrollbar_slider_height -2, false);	
+
 //scale factor to reduce the size of the sprites and boxes
     var scale_factor = 0.4;
     var scale_factor_2 = 0.5;
@@ -109,7 +138,7 @@ if (global.show_selection_box) {
                         //box clicked, restart alarm + hide seed box
                         global.selection_box_active = false;
                         global.show_selection_box = false;
-                        alarm[0] = 60 * 10;
+                        alarm[0] = 60 * 60;
 
                         //add the selected seed to the inventory
                         var chosen_seed = global.seeds[i];
