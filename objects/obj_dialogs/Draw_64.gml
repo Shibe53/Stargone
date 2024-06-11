@@ -35,7 +35,7 @@ if(showing_dialog == true) {
 	
 	draw_set_color(c_white);
 	text_align(fa_left, fa_top);
-	draw_text_ext(text_x, box_pos + text_y, current_dialog.message, 50, display_get_gui_width() - 300);
+	draw_text_ext(text_x, box_pos + text_y + 5, current_dialog.message, 50, display_get_gui_width() - 300);
 	draw_text_ext_color(display_get_gui_width() - 390, box_pos + height - 55, "Press SPACE to proceed", 20, display_get_gui_width() - 100, c_white, c_white, c_white, c_white, 0.3);
 	
 	alpha = lerp(alpha, 1, 0.06);
